@@ -1,0 +1,90 @@
+// variables - colors, font definitions, spacings, sizes, breakpoints, etc
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@200;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@200;400;600&family=Montserrat:wght@200;400;600&display=swap');
+
+$primary-font: 'Barlow Condensed';
+$secondary-font: 'Montserrat';
+$bg-light: #DBD4A6;
+$bg-dark: #6EA49E;
+$text: #0C2037;
+
+// general styles
+body {
+    margin: 0;
+    font-family: $secondary-font;
+    color: $text;
+}
+
+h1,
+h2,
+h3 {
+    font-family: $primary-font;
+    margin: 0;
+}
+
+// navigation
+.nav {
+    position: fixed;
+    top: 0;
+    width: calc(100% - 15px);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $bg-light;
+    box-shadow: 0px 0px 4px $bg-dark;
+    padding-left: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    transition: all 0.2s ease;
+
+    &__list {
+        display: flex;
+        flex-direction: row;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__item {
+        list-style: none;
+        
+    }
+
+    &__link {
+        display: block;
+        text-decoration: none;
+        color: $text;
+        font-family: $primary-font;
+        line-height: 40px;
+        font-size: 22px;
+        padding: 0 10px;
+        transition: background-color 0.2s ease;
+
+        &:hover {
+            background-color: $bg-dark;
+        }
+    }
+}
+
+.hero {
+    background-image: url('https://t3.ftcdn.net/jpg/00/68/57/74/360_F_68577493_kmIBQEQRqYz7L5MCbv5Fte40mD5Ey4KZ.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    &__title {
+        font-size: 45px;
+    }
+
+    &__text {
+        font-size: 25px;
+        font-weight: 600;
+    }
+}
