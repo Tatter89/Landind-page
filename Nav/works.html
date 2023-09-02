@@ -4,76 +4,147 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Landing page</title>
-
-    <link rel="stylesheet" href="style.css" />
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
-      crossorigin="anonymous"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
     />
+    <title>Landing page</title>
+    <script
+      src="https://kit.fontawesome.com/edef1efc93.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="/style.css" />
   </head>
-  <body>
-    <!--   <nav id="navbar" class="container-float">
-      <div class="bio"><a href="Nav/bio.html">Önéletrajz</a></div>
-      <div class="works"><a href="Nav/works.html">Munkáim</a></div>
-      <div class="planning">
-        <a href="Nav/planning.html">Tervezés menete/FAQ</a>
-      </div>
-      <div class="contact"><a href="Nav/contact.html">Kapcsolat</a></div>
-    </nav> -->
 
-    <nav class="navbar navbar-expand-lg bg-body-tertiary float-end">
-      <div class="container-fluid">
-        <!-- <a class="navbar-brand" href="#">Brand/icon</a> -->
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
+  <body>
+    <nav class="nav">
+      <div class="nav__left">
+        <a class="nav__link" href="/index.html"
+          ><h1 class="nav__title">Dr. Tóth Bence Péter</h1></a
         >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="/index.html"
-                >Főoldal</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/Nav/bio.html">Önéletrajz</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="/Nav/works.html">Munkáim</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/Nav/planning.html"
-                >Tervezés menete/FAQ</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/Nav/contact.html">Kapcsolat</a>
-            </li>
-          </ul>
-        </div>
+      </div>
+      <div class="nav__right">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a class="nav__link" href="/index.html">Főoldal</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="/Nav/bio.html">Önéletrajz</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="/Nav/works.html">Munkáim</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="/Nav/planning.html"
+              >Tervezés menete / FAQ</a
+            >
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="/Nav/contact.html">Kontakt</a>
+          </li>
+        </ul>
       </div>
     </nav>
 
-    <!-- Leaflet map- js code to load -->
-    <div class="map" id="map"></div>
+    <div class="menu-btn">
+      <span class="menu-btn__burger"></span>
+    </div>
 
-    <!-- Instaload imgs -->
-    <div class="container" id="main-container">Landing</div>
+    <div class="works-container">
+      <div class="img-gallery">
+        <div class="slide active">
+          <img src="/Images/image-1.png" alt="" />
+          <div class="info">
+            <h2>Slide 01</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias,
+              animi?
+            </p>
+          </div>
+        </div>
+
+        <div class="slide">
+          <img src="/Images/image-2.png" alt="" />
+          <div class="info">
+            <h2>Slide 02</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias,
+              animi?
+            </p>
+          </div>
+        </div>
+
+        <div class="slide">
+          <img src="/Images/image-3.png" alt="" />
+          <div class="info">
+            <h2>Slide 03</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias,
+              animi?
+            </p>
+          </div>
+        </div>
+
+        <div class="slide">
+          <img src="/Images/image-4.png" alt="" />
+          <div class="info">
+            <h2>Slide 04</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias,
+              animi?
+            </p>
+          </div>
+        </div>
+
+        <div class="slide">
+          <img src="/Images/image-5.png" alt="" />
+          <div class="info">
+            <h2>Slide 05</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias,
+              animi?
+            </p>
+          </div>
+        </div>
+        <div class="gallery-nav">
+          <div class="btn active"></div>
+          <div class="btn"></div>
+          <div class="btn"></div>
+          <div class="btn"></div>
+          <div class="btn"></div>
+        </div>
+      </div>
+
+      <div class="works-content">
+        <h1>Lorem ipsum dolor sit.</h1>
+        <h2>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel
+          perferendis ipsa explicabo rerum sit, excepturi dignissimos sapiente
+          ea quam nulla accusantium aperiam soluta aspernatur omnis voluptatum
+          dolor minus perspiciatis alias commodi! Ipsum vel nisi laudantium
+          earum quas, sunt possimus modi assumenda dolores impedit culpa
+          praesentium quam quasi suscipit nulla debitis ea id at ab nihil
+          aliquid quidem in explicabo minima. Facilis nemo assumenda amet rem
+          quasi nulla! Velit modi eos nam dolore, quod voluptate perferendis
+          fugiat, vitae enim exercitationem explicabo voluptates quidem delectus
+          commodi, impedit vero! Numquam nostrum porro accusantium magnam et
+          consequatur veritatis, exercitationem eaque ullam tempora? Suscipit,
+          quasi.
+        </h2>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footercontainer">
+        <h2><i class="bi bi-c-circle"></i> Lorem ipsum dolor sit.</h2>
+      </div>
+    </footer>
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
       crossorigin="anonymous"
     ></script>
-    <script src="script.js"></script>
+    <script src="../script.js"></script>
   </body>
 </html>

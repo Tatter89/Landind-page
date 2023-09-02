@@ -1,2 +1,5 @@
-Github pages setup
-SCSS setup
+[ ] Github pages setup
+[x] SCSS setup
+
+Custom implementation of mobile menu instead of bootstrap
+Some kind of parallax effect on the main page hero?
