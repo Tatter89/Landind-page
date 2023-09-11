@@ -3,3 +3,14 @@
 
 Custom implementation of mobile menu instead of bootstrap
 Some kind of parallax effect on the main page hero?
+
+Button -scrollToTop
+Hero- responsive slideshow
+CV - HU/EN - changing CV image
+Works - Map with active links
+      - Slidehow for Works
+      - Button - back to the Map
+
+Planning - Every active div -> Image for that (Tervezés -> Alaprajz img)
+            - Transition
+            -Img fixed to the screen

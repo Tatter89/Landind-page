@@ -2,50 +2,16 @@ const menuBtn = document.querySelector(".menu-btn");
 const hamburger = document.querySelector(".menu-btn__burger");
 const nav = document.querySelector(".nav");
 
-// Slider
-const slides = document.querySelectorAll(".slide");
-const slideBtn = document.querySelectorAll(".btn");
-
-// FAQ Button
+/* // FAQ Button
 
 const faqBoxes = document.querySelectorAll(".faq-box");
+const faqIcons = document.querySelectorAll(".fa-chevron-down");
 
 faqBoxes.forEach((faqBox) => {
   faqBox.addEventListener("click", (event) => {
     faqBox.classList.toggle("active");
   });
-});
-
-/* for (i = 0; i < fayBox.length; i++) {
-  faqBox[i].addEventListener("click", function () {
-    this.classlist.toggle("active");
-  });
-} */
-/* 
-faqBox.addEventListener("click", function () {
-  faqBox.classList.add("active");
-});
- */
-let currentSlide = 1;
-
-const manualNav = function (manual) {
-  slides.forEach((slide) => {
-    slide.classList.remove("active");
-    slideBtn.forEach((btn) => {
-      btn.classList.remove("active");
-    });
-  });
-
-  slides[manual].classList.add("active");
-  slideBtn[manual].classList.add("active");
-};
-
-slideBtn.forEach((btn, i) => {
-  btn.addEventListener("click", () => {
-    manualNav(i);
-    currentSlide = i;
-  });
-});
+}); */
 
 //Show menu
 
@@ -75,11 +41,9 @@ const displayNavOnScroll = () => {
   const currentScrollPosition = window.pageYOffset;
   const nav = document.querySelector(".nav");
   if (previousScrollPosition > currentScrollPosition) {
-    nav.style.backgroundColor = "rgba(83, 83, 83, 0.4)";
     nav.style.paddingTop = "15px";
     nav.style.paddingBottom = "15px";
   } else {
-    nav.style.backgroundColor = "rgba(83, 83, 83, 0.2)";
     nav.style.paddingTop = "5px";
     nav.style.paddingBottom = "5px";
   }
@@ -87,3 +51,82 @@ const displayNavOnScroll = () => {
 };
 
 document.addEventListener("scroll", displayNavOnScroll);
+
+// Dragable slider
+
+const carousel = document.querySelector(".carousel"),
+  firstImg = carousel.querySelectorAll("img")[0];
+arrowIcons = document.querySelectorAll(".wrapper i");
+
+let isDragStart = false,
+  isDragging = false,
+  prevPageX,
+  prevSrollLeft,
+  positionDiff;
+
+const showHideIcons = () => {
+  let scrollWidth = carousel.scrollWidth - carousel.clientWidth;
+
+  arrowIcons[0].style.display = carousel.scrollLeft == 0 ? "none" : "block";
+  arrowIcons[1].style.display =
+    carousel.scrollLeft == scrollWidth ? "none" : "block";
+};
+
+arrowIcons.forEach((icon) => {
+  icon.addEventListener("click", () => {
+    let firstImgWidth = firstImg.clientWidth + 14;
+    carousel.scrollLeft += icon.id == "left" ? -firstImgWidth : firstImgWidth;
+    setTimeout(() => showHideIcons(), 60);
+  });
+});
+
+const autoSlide = () => {
+  if (carousel.scrollLeft == carousel.scrollWidth - carousel.clientWidth)
+    return;
+
+  positionDiff = Math.abs(positionDiff);
+  let firstImgWidth = firstImg.clientWidth + 14;
+  let valDifference = firstImgWidth - positionDiff;
+
+  if (carousel.scrollLeft > prevSrollLeft) {
+    return (carousel.scrollLeft +=
+      positionDiff > firstImgWidth / 3 ? valDifference : -positionDiff);
+  }
+  carousel.scrollLeft -=
+    positionDiff > firstImgWidth / 3 ? valDifference : -positionDiff;
+};
+
+const dragStart = (e) => {
+  isDragStart = true;
+  prevPageX = e.pageX || e.touches[0].pageX;
+  prevSrollLeft = carousel.scrollLeft;
+};
+
+const dragging = (e) => {
+  if (!isDragStart) return;
+  e.preventDefault();
+  isDragging = true;
+  carousel.classList.add("dragging");
+  positionDiff = (e.pageX || e.touches[0].pageX) - prevPageX;
+  carousel.scrollLeft = prevSrollLeft - positionDiff;
+  showHideIcons();
+};
+
+const dragStop = () => {
+  isDragStart = false;
+  carousel.classList.remove("dragging");
+
+  if (!isDragging) return;
+  isDragging = false;
+  autoSlide();
+};
+
+carousel.addEventListener("mousedown", dragStart);
+carousel.addEventListener("touchstart", dragStart);
+
+carousel.addEventListener("mousemove", dragging);
+carousel.addEventListener("touchmove", dragging);
+
+carousel.addEventListener("mouseup", dragStop);
+carousel.addEventListener("mouseleave", dragStop);
+carousel.addEventListener("touchend", dragStop);

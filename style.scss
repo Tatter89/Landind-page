@@ -1,6 +1,8 @@
 // variables - colors, font definitions, spacings, sizes, breakpoints, etc
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@200;400;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@200;400;600&family=Montserrat:wght@200;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Adamina&family=Quicksand:wght@300&family=Roboto&family=Saira+Condensed:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora&family=Quicksand:wght@300&family=Roboto&family=Saira+Condensed:wght@300&display=swap");
 
 @mixin flexCenter {
   display: flex;
@@ -11,40 +13,136 @@
 @mixin transition {
   transition: all 0.5s ease-in-out;
 }
-
-$primary-font: "Barlow Condensed";
-$secondary-font: "Montserrat";
+$primary-color: #333533;
+$secondary-color: #f5cb5c;
+$primary-font: "Lora";
+$secondary-font: "Lora";
 $bg-light: rgba(83, 83, 83, 0.5);
 $bg-dark: #fffbf0;
 $text: #121213;
 
-$tabletWidth: 1200px;
-$mobileWidth: 800px;
+$xs: 576px;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
 
 // general styles
 body {
   margin: 0;
   overflow-x: hidden;
-  font-family: $secondary-font;
+  font-family: $primary-font;
+  font-weight: lighter;
   color: $bg-dark;
-  /* background: linear-gradient(
+  background: linear-gradient(
     to right,
-    rgba(27, 27, 27, 0.5),
-    rgba(0, 0, 0, 0.1)
-  ); */
-
+    rgba($primary-color, 0.9),
+    rgba($primary-color, 0.2)
+  );
+  /* 
   background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.1)),
-    url(/Images/blank-brown-paper-textured-wallpaper.jpg);
+    url(/Images/blank-brown-paper-textured-wallpaper-min.jpg); */
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
 }
 
-h1,
+h1 {
+  color: $secondary-color;
+  margin: 0;
+}
 h2,
 h3 {
   font-family: $primary-font;
   margin: 0;
+  font-weight: lighter;
+}
+
+.wrapper {
+  @include flexCenter;
+  width: 100vw;
+  min-height: 100vh;
+  padding: 0;
+  position: relative;
+
+  & i {
+    position: absolute;
+    top: 50%;
+    height: 46px;
+    width: 46px;
+    color: $secondary-color;
+    background: $primary-color;
+    text-align: center;
+    line-height: 46px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 2rem;
+    transform: translateX(-50%);
+
+    &:first-child {
+      left: 25px;
+      display: none;
+    }
+    &:last-child {
+      right: -15px;
+    }
+  }
+
+  & .carousel {
+    white-space: nowrap;
+    cursor: pointer;
+    overflow: hidden;
+    scroll-behavior: smooth;
+
+    &.dragging {
+      cursor: grabbing;
+      scroll-behavior: auto;
+
+      & img {
+        pointer-events: none;
+      }
+    }
+  }
+  & img {
+    height: 100vh;
+    object-fit: cover;
+    width: 100%;
+    margin-left: 0px;
+
+    @media (max-width: $lg) {
+      width: calc(100% / 1);
+    }
+
+    &:first-child {
+      margin-left: 0px;
+    }
+  }
+}
+
+.logo {
+  & img {
+    margin: 0;
+    color: $secondary-color;
+    background: $secondary-color;
+    height: 50px;
+  }
+}
+
+.to-top {
+  & i {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    font-size: 2rem;
+    background: rgba($bg-dark, 0.2);
+    padding: 4px 8px;
+    border: 1px solid rgba($bg-light, 0.7);
+    border-radius: 4px;
+    cursor: pointer;
+    background: rgba($primary-color, 0.5);
+    color: $secondary-color;
+  }
 }
 
 // navigation
@@ -56,19 +154,27 @@ h3 {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background-color: $bg-light;
+  background-color: rgba($primary-color, 0.7);
   box-shadow: 0px 0px 4px $bg-dark;
-
   padding-left: 15px;
   padding-top: 15px;
   padding-bottom: 15px;
   transition: all 0.2s ease;
   z-index: 2;
 
-  @media (max-width: $mobileWidth) {
+  @media (max-width: $md) {
     display: flex;
     flex-direction: column;
     transform: translateY(-110%);
+  }
+  &__left {
+    @include flexCenter;
+
+    & a {
+      & h1:hover {
+        color: $primary-color;
+      }
+    }
   }
 
   &.open {
@@ -81,7 +187,7 @@ h3 {
     margin: 0;
     padding: 0;
 
-    @media (max-width: $mobileWidth) {
+    @media (max-width: $md) {
       display: flex;
       flex-direction: column;
     }
@@ -94,16 +200,16 @@ h3 {
   &__link {
     display: block;
     text-decoration: none;
-    color: $bg-dark;
+    color: $secondary-color;
     font-family: $primary-font;
-    font-weight: 500;
     line-height: 40px;
-    font-size: 22px;
+    font-size: 18px;
     padding: 0 10px;
     transition: background-color 0.2s ease;
 
     &:hover {
-      background-color: $bg-light;
+      background-color: $secondary-color;
+      color: $primary-color;
     }
   }
 }
@@ -119,7 +225,7 @@ h3 {
   visibility: hidden;
   @include transition;
 
-  @media (max-width: $mobileWidth) {
+  @media (max-width: $md) {
     visibility: visible;
   }
 
@@ -129,7 +235,7 @@ h3 {
     top: 0.5rem;
     width: 28px;
     height: 3px;
-    background: $bg-dark;
+    background: $primary-color;
 
     @include transition;
 
@@ -139,7 +245,7 @@ h3 {
       top: -8px;
       width: 28px;
       height: 3px;
-      background: $bg-dark;
+      background: $primary-color;
       @include transition;
     }
 
@@ -149,7 +255,7 @@ h3 {
       top: 8px;
       width: 20px;
       height: 3px;
-      background: $bg-dark;
+      background: $primary-color;
       @include transition;
     }
 
@@ -170,9 +276,10 @@ h3 {
 }
 
 .hero {
+  /* 
   background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2)),
     // darker overlay EZ
-    url(/Images/hero.jpg);
+    url(/Images/hero-min.jpg); */
   @include flexCenter;
   background-repeat: no-repeat;
   background-size: cover;
@@ -188,7 +295,6 @@ h3 {
 
   &__text {
     font-size: 25px;
-    font-weight: 600;
   }
 }
 
@@ -198,16 +304,27 @@ h3 {
   @include flexCenter;
   flex-wrap: wrap;
   margin: 2rem auto;
+
+  & h1 {
+    margin: 2rem auto;
+    text-decoration: underline;
+  }
+
+  & .instaload {
+    @include flexCenter;
+    flex-wrap: wrap;
+  }
+
   & img {
     width: 25vw;
     margin: 10px;
 
-    @media (max-width: $mobileWidth) {
+    @media (max-width: $md) {
       width: 35vw;
       margin: 1rem 1rem;
     }
   }
-  @media (max-width: $mobileWidth) {
+  @media (max-width: $md) {
     width: calc(100% - 15px);
   }
 }
@@ -220,7 +337,7 @@ h3 {
 }
 .bio-container {
   display: flex;
-  @media (max-width: $mobileWidth) {
+  @media (max-width: $md) {
     @include flexCenter;
     width: 90vw;
     flex-direction: column;
@@ -230,19 +347,34 @@ h3 {
   & img {
     width: 40vw;
 
-    @media (max-width: $mobileWidth) {
+    @media (max-width: $md) {
       width: 80vw;
     }
   }
 }
 .bioimg {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  & a {
+    color: $secondary-color;
+    font-size: 2rem;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  & i {
+    color: $secondary-color;
+    font-size: 2rem;
+  }
+
   & img {
     margin: 40px;
-    position: sticky;
     top: 0;
     width: 20vw;
 
-    @media (max-width: $mobileWidth) {
+    @media (max-width: $md) {
       width: 40vw;
     }
   }
@@ -252,9 +384,29 @@ footer {
   bottom: 0;
   width: 100vw;
   background-color: $bg-light;
-  color: $text;
+  color: $secondary-color;
   @include flexCenter;
   height: 10vh;
+
+  & .footer-container {
+    @include flexCenter;
+
+    & h2 {
+      margin: 0 2rem;
+    }
+
+    & .social-icons {
+      & i {
+        color: $secondary-color;
+        font-size: 1.5rem;
+        margin: 0 1rem;
+
+        &:hover {
+          color: $text;
+        }
+      }
+    }
+  }
 }
 
 .works-container {
@@ -263,69 +415,67 @@ footer {
   justify-content: center;
   padding: 5rem;
   flex-direction: column;
+
+  & .works-map {
+    & img {
+      width: 70vw;
+      height: 80vh;
+    }
+  }
+
+  & .works-content {
+    h1 {
+      margin: 2rem;
+    }
+  }
+
+  & .wrapper {
+    width: 70vw;
+    min-height: 60vh;
+
+    & img {
+      width: calc(100% / 3);
+      margin: 4px;
+    }
+  }
 }
 
-.img-gallery {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  width: 35vw;
-  height: 80vh;
-  margin-bottom: 10vh;
-  margin-top: 5vh;
+#accordion {
+  margin: 100px auto;
+  width: 50vw;
 
-  @media (max-width: $mobileWidth) {
-    width: 80vw;
+  & .faq-content {
+    padding: 0 10px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s;
   }
-  & .gallery-nav {
-    z-index: 2;
-    position: absolute;
-    display: flex;
-    bottom: 1rem;
-    left: 50%;
-    transform: translateX(-50%);
 
-    & .btn {
-      background: rgba($text, 0.3);
-      width: 12px;
-      height: 12px;
-      margin: 10px;
-      border-radius: 50%;
-      cursor: pointer;
-      &.active {
-        background: $text;
-      }
-    }
-  }
-  & .slide {
-    clip-path: circle(0% at 0 50%);
-    position: absolute;
-    z-index: 1;
+  & li {
+    list-style-type: none;
     width: 100%;
-    &.active {
-      clip-path: circle(150% at 0 50%);
-      transition: 1.5s;
-      transition-property: clip-path;
-    }
-    & .info {
-      position: absolute;
-      top: 1rem;
-      left: 1rem;
-      padding: 1rem 2rem;
-      & h2 {
-        color: $bg-dark;
-        font-size: 2rem;
+    margin-bottom: 100px;
+    background: rgba($secondary-color, 0.4);
+    padding: 15px;
+    border-radius: 3px;
+
+    & label {
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 2rem;
+      font-weight: 600;
+      cursor: pointer;
+      color: $primary-color;
+
+      & + input[type="radio"] {
+        display: none;
+
+        &:checked + .faq-content {
+          max-height: 100%;
+        }
       }
-      & p {
-        color: $text;
-        background: rgba($bg-dark, 0.2);
-      }
-    }
-    & img {
-      z-index: 1;
-      width: 100%;
-      border-radius: 5px;
     }
   }
 }
@@ -344,23 +494,25 @@ footer {
     & p {
       max-height: 0;
       overflow: hidden;
-      transition: max-height 0.2s ease-out;
-    }
-    & i {
-      position: absolute;
-      right: 0;
-      top: 1rem;
-      font-size: 25px;
-      transition: transform 0.2s ease-in-out;
+      transition: max-height 0.3s ease-out;
     }
 
     &.active {
       & p {
         max-height: 100%;
       }
+
       & i {
         transform: rotate(180deg);
       }
+    }
+
+    & i {
+      position: absolute;
+      right: 0;
+      top: 1rem;
+      font-size: 25px;
+      transition: transform 0.2s ease-in-out;
     }
   }
 
@@ -377,29 +529,53 @@ footer {
 .faq-img {
   width: 50vw;
   height: 70vh;
-  padding: 5rem;
+  padding: 4rem;
 
-  @media (max-width: $mobileWidth) {
+  @media (max-width: $md) {
     display: none;
   }
 
   & img {
-    height: 100%;
+    position: absolute;
+    height: 100vh;
     max-width: 100%;
   }
 }
 .faq-line {
   width: 90%;
-  height: 2px;
+  height: 3px;
   margin: auto;
-  background: #121213;
+  background: $primary-color;
+  background: linear-gradient(
+    to right,
+    transparent,
+    $primary-color,
+    transparent
+  );
 }
 
 .contact-container {
+  background-image: url(/Images/contact_img.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
   @include flexCenter;
-  flex-direction: column;
-  margin: 5rem;
-  height: 80vh;
+  position: relative;
+  margin: 0;
+  height: 100vh;
+
+  & .contact-links {
+    background: rgba($primary-color, 0.5);
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px #fffbf0;
+    position: absolute;
+    top: 6rem;
+
+    & i {
+      color: $secondary-color;
+    }
+  }
 
   & h1,
   h2 {
@@ -409,11 +585,32 @@ footer {
     cursor: pointer;
     font-size: 2rem;
     & i {
-      color: $text;
+      color: $secondary-color;
       margin: 1rem;
       &:hover {
-        color: $bg-dark;
+        color: $primary-color;
       }
     }
+  }
+}
+
+.works-box-static {
+  @include flexCenter;
+  flex-direction: column;
+  margin: 3rem auto;
+
+  & .img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem auto;
+    flex-wrap: wrap;
+  }
+
+  & img {
+    width: 30vw;
+    height: 30vh;
+    margin: 2rem;
+    object-fit: contain;
   }
 }
