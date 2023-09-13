@@ -28,6 +28,10 @@ $lg: 992px;
 $xl: 1200px;
 $xxl: 1400px;
 
+html {
+  scroll-behavior: smooth;
+}
+
 // general styles
 body {
   margin: 0;
@@ -342,6 +346,19 @@ h3 {
     width: 90vw;
     flex-direction: column;
   }
+
+  & a {
+    border: 2px solid rgba($primary-color, 0.4);
+    padding: 10px 20px;
+    background: rgba($primary-color, 0.3);
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover {
+      background: rgba($secondary-color, 0.5);
+      color: $text;
+    }
+  }
 }
 .cvcontainer {
   & img {
@@ -424,8 +441,11 @@ footer {
   }
 
   & .works-content {
+    display: flex;
+    flex-direction: column;
+
     h1 {
-      margin: 2rem;
+      margin: 2rem auto;
     }
   }
 
@@ -442,13 +462,13 @@ footer {
 
 #accordion {
   margin: 100px auto;
-  width: 50vw;
+  width: 40vw;
 
   & .faq-content {
     padding: 0 10px;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s;
+    transition: max-height 0.6s ease-out;
   }
 
   & li {
@@ -458,6 +478,15 @@ footer {
     background: rgba($secondary-color, 0.4);
     padding: 15px;
     border-radius: 3px;
+
+    & img {
+      position: fixed;
+      margin: 0;
+      max-height: 0;
+      top: 20vh;
+      right: 10rem;
+      transition: max-height 0.6s ease-out;
+    }
 
     & label {
       padding: 10px;
@@ -473,7 +502,11 @@ footer {
         display: none;
 
         &:checked + .faq-content {
-          max-height: 100%;
+          max-height: 200px;
+
+          & img {
+            max-height: 80vh;
+          }
         }
       }
     }
@@ -484,11 +517,12 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100vw;
+  width: 50vw;
+  margin-right: 70vw;
 
-  & .faq-box {
+  /* & .faq-box {
     position: relative;
-    margin: 2rem auto;
+    margin: 1rem auto;
     cursor: pointer;
 
     & p {
@@ -524,23 +558,24 @@ footer {
       flex-direction: column;
       margin: 2rem auto;
     }
-  }
+  } */
 }
-.faq-img {
+/* .faq-img {
   width: 50vw;
   height: 70vh;
-  padding: 4rem;
 
   @media (max-width: $md) {
     display: none;
   }
 
   & img {
-    position: absolute;
-    height: 100vh;
-    max-width: 100%;
+    width: 40vw;
+    margin-left: 5rem;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
   }
-}
+} */
 .faq-line {
   width: 90%;
   height: 3px;

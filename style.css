@@ -2,6 +2,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@200;400;600&family=Montserrat:wght@200;400;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Adamina&family=Quicksand:wght@300&family=Roboto&family=Saira+Condensed:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lora&family=Quicksand:wght@300&family=Roboto&family=Saira+Condensed:wght@300&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   overflow-x: hidden;
@@ -428,6 +432,19 @@ h3 {
   }
 }
 
+.bio-container a {
+  border: 2px solid rgba(51, 53, 51, 0.4);
+  padding: 10px 20px;
+  background: rgba(51, 53, 51, 0.3);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.bio-container a:hover {
+  background: rgba(245, 203, 92, 0.5);
+  color: #121213;
+}
+
 .cvcontainer img {
   width: 40vw;
 }
@@ -540,8 +557,18 @@ footer .footer-container .social-icons i:hover {
   height: 80vh;
 }
 
+.works-container .works-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .works-container .works-content h1 {
-  margin: 2rem;
+  margin: 2rem auto;
 }
 
 .works-container .wrapper {
@@ -556,15 +583,15 @@ footer .footer-container .social-icons i:hover {
 
 #accordion {
   margin: 100px auto;
-  width: 50vw;
+  width: 40vw;
 }
 
 #accordion .faq-content {
   padding: 0 10px;
   max-height: 0;
   overflow: hidden;
-  -webkit-transition: max-height 0.3s;
-  transition: max-height 0.3s;
+  -webkit-transition: max-height 0.6s ease-out;
+  transition: max-height 0.6s ease-out;
 }
 
 #accordion li {
@@ -574,6 +601,16 @@ footer .footer-container .social-icons i:hover {
   background: rgba(245, 203, 92, 0.4);
   padding: 15px;
   border-radius: 3px;
+}
+
+#accordion li img {
+  position: fixed;
+  margin: 0;
+  max-height: 0;
+  top: 20vh;
+  right: 10rem;
+  -webkit-transition: max-height 0.6s ease-out;
+  transition: max-height 0.6s ease-out;
 }
 
 #accordion li label {
@@ -598,7 +635,11 @@ footer .footer-container .social-icons i:hover {
 }
 
 #accordion li label + input[type="radio"]:checked + .faq-content {
-  max-height: 100%;
+  max-height: 200px;
+}
+
+#accordion li label + input[type="radio"]:checked + .faq-content img {
+  max-height: 80vh;
 }
 
 .faq-container {
@@ -611,83 +652,65 @@ footer .footer-container .social-icons i:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 100vw;
+  width: 50vw;
+  margin-right: 70vw;
+  /* & .faq-box {
+    position: relative;
+    margin: 1rem auto;
+    cursor: pointer;
+
+    & p {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+    }
+
+    &.active {
+      & p {
+        max-height: 100%;
+      }
+
+      & i {
+        transform: rotate(180deg);
+      }
+    }
+
+    & i {
+      position: absolute;
+      right: 0;
+      top: 1rem;
+      font-size: 25px;
+      transition: transform 0.2s ease-in-out;
+    }
+  }
+
+  & .faq {
+    padding: 5rem;
+
+    & .faq-title {
+      @include flexCenter;
+      flex-direction: column;
+      margin: 2rem auto;
+    }
+  } */
 }
 
-.faq-container .faq-box {
-  position: relative;
-  margin: 2rem auto;
-  cursor: pointer;
-}
-
-.faq-container .faq-box p {
-  max-height: 0;
-  overflow: hidden;
-  -webkit-transition: max-height 0.3s ease-out;
-  transition: max-height 0.3s ease-out;
-}
-
-.faq-container .faq-box.active p {
-  max-height: 100%;
-}
-
-.faq-container .faq-box.active i {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-}
-
-.faq-container .faq-box i {
-  position: absolute;
-  right: 0;
-  top: 1rem;
-  font-size: 25px;
-  -webkit-transition: -webkit-transform 0.2s ease-in-out;
-  transition: -webkit-transform 0.2s ease-in-out;
-  transition: transform 0.2s ease-in-out;
-  transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
-}
-
-.faq-container .faq {
-  padding: 5rem;
-}
-
-.faq-container .faq .faq-title {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin: 2rem auto;
-}
-
-.faq-img {
+/* .faq-img {
   width: 50vw;
   height: 70vh;
-  padding: 4rem;
-  position: relative;
-}
 
-@media (max-width: 768px) {
-  .faq-img {
+  @media (max-width: $md) {
     display: none;
   }
-}
 
-.faq-img img {
-  position: absolute;
-  top: 0;
-  height: 100vh;
-  max-width: 100%;
-}
-
+  & img {
+    width: 40vw;
+    margin-left: 5rem;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+} */
 .faq-line {
   width: 90%;
   height: 3px;
