@@ -63,7 +63,9 @@ h3 {
   font-weight: lighter;
 }
 
-.wrapper {
+// Wrapper-old
+
+/* .wrapper {
   @include flexCenter;
   width: 100vw;
   min-height: 100vh;
@@ -122,7 +124,7 @@ h3 {
       margin-left: 0px;
     }
   }
-}
+} */
 
 .logo {
   & img {
@@ -449,7 +451,7 @@ footer {
     }
   }
 
-  & .wrapper {
+  /* & .wrapper {
     width: 70vw;
     min-height: 60vh;
 
@@ -457,7 +459,7 @@ footer {
       width: calc(100% / 3);
       margin: 4px;
     }
-  }
+  } */
 }
 
 #accordion {
@@ -647,5 +649,31 @@ footer {
     height: 30vh;
     margin: 2rem;
     object-fit: contain;
+  }
+}
+
+.wrapper {
+  display: flex;
+  grid-gap: 1rem;
+  max-width: 1200px;
+  overflow-x: auto;
+  scroll-snap-type: x;
+  cursor: grab;
+  scroll-behavior: smooth;
+}
+
+.slider {
+  min-width: 100%;
+  aspect-ratio: 2 / 1;
+  background: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  scroll-snap-align: start;
+  user-select: none;
+
+  & img {
+    width: 1000px;
   }
 }

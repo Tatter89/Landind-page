@@ -54,7 +54,7 @@ document.addEventListener("scroll", displayNavOnScroll);
 
 // Dragable slider
 
-const carousel = document.querySelector(".carousel"),
+/* const carousel = document.querySelector(".carousel"),
   firstImg = carousel.querySelectorAll("img")[0];
 arrowIcons = document.querySelectorAll(".wrapper i");
 
@@ -129,4 +129,32 @@ carousel.addEventListener("touchmove", dragging);
 
 carousel.addEventListener("mouseup", dragStop);
 carousel.addEventListener("mouseleave", dragStop);
-carousel.addEventListener("touchend", dragStop);
+carousel.addEventListener("touchend", dragStop); */
+
+const wrapper = document.querySelector(".wrapper");
+
+let pressed = false;
+let startX = 0;
+
+wrapper.addEventListener("mousedown", function (e) {
+  pressed = true;
+  startX = e.clientX;
+  this.style.cursor = "grabbing";
+});
+
+wrapper.addEventListener("mouseleave", function (e) {
+  pressed = false;
+});
+
+window.addEventListener("mouseup", function (e) {
+  pressed = false;
+  wrapper.style.cursor = "grab";
+});
+
+wrapper.addEventListener("mousemove", function (e) {
+  if (!pressed) {
+    return;
+  }
+
+  this.scrollLeft += startX - e.clientX;
+});
