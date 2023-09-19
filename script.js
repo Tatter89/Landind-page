@@ -131,30 +131,86 @@ carousel.addEventListener("mouseup", dragStop);
 carousel.addEventListener("mouseleave", dragStop);
 carousel.addEventListener("touchend", dragStop); */
 
-const wrapper = document.querySelector(".wrapper");
+const imageCarousel = (carouselElement) => {
+  let activeIndex = 0;
+  const prevButton = carouselElement.querySelector(
+    ".image-carousel__btn--prev"
+  );
+  const nextButton = carouselElement.querySelector(
+    ".image-carousel__btn--next"
+  );
+  const slides = carouselElement.getElementsByClassName(
+    "image-carousel__slide"
+  );
 
-let pressed = false;
-let startX = 0;
+  slides[activeIndex].classList.add("image-carousel__slide--active");
 
-wrapper.addEventListener("mousedown", function (e) {
-  pressed = true;
-  startX = e.clientX;
-  this.style.cursor = "grabbing";
+  const nextSlide = () => {
+    if (activeIndex < slides.length - 1) {
+      slides[activeIndex].classList.remove("image-carousel__slide--active");
+      slides[activeIndex + 1].classList.add("image-carousel__slide--active");
+      activeIndex++;
+    } else {
+      slides[activeIndex].classList.remove("image-carousel__slide--active");
+      activeIndex = 0;
+      slides[activeIndex].classList.add("image-carousel__slide--active");
+    }
+  };
+
+  const prevSlide = () => {
+    if (activeIndex > 0) {
+      slides[activeIndex].classList.remove("image-carousel__slide--active");
+      slides[activeIndex - 1].classList.add("image-carousel__slide--active");
+      activeIndex--;
+    } else {
+      slides[activeIndex].classList.remove("image-carousel__slide--active");
+      activeIndex = slides.length - 1;
+      slides[activeIndex].classList.add("image-carousel__slide--active");
+    }
+  };
+
+  nextButton.addEventListener("click", () => nextSlide());
+  prevButton.addEventListener("click", () => prevSlide());
+
+  // adding touch event
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  const checkDirection = () => {
+    if (touchEndX < touchStartX) nextSlide();
+    if (touchEndX > touchStartX) prevSlide();
+  };
+
+  carouselElement.addEventListener("touchstart", (event) => {
+    touchStartX = event.changedTouches[0].screenX;
+  });
+
+  carouselElement.addEventListener("touchend", (event) => {
+    touchEndX = event.changedTouches[0].screenX;
+    checkDirection();
+  });
+};
+
+document.addEventListener("DOMContentLoaded", () => {
+  imageCarousel(document.getElementById("badacsony"));
+  imageCarousel(document.getElementById("balaton"));
+  imageCarousel(document.getElementById("image-carousel-3"));
+});
+document.addEventListener("DOMContentLoaded", () => {
+  imageCarousel(document.getElementById("hero-carousel"));
 });
 
-wrapper.addEventListener("mouseleave", function (e) {
-  pressed = false;
-});
+// To top Btn
 
-window.addEventListener("mouseup", function (e) {
-  pressed = false;
-  wrapper.style.cursor = "grab";
-});
+const toTopBtn = document.querySelector("#to-top-btn");
+const toDownBtn = document.querySelector("#to-down-btn");
 
-wrapper.addEventListener("mousemove", function (e) {
-  if (!pressed) {
-    return;
+window.addEventListener("scroll", () => {
+  if (window.pageYOffset > 600) {
+    toTopBtn.classList.add("active");
+    toDownBtn.classList.remove("active");
+  } else {
+    toTopBtn.classList.remove("active");
+    toDownBtn.classList.add("active");
   }
-
-  this.scrollLeft += startX - e.clientX;
 });

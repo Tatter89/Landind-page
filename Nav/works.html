@@ -54,90 +54,28 @@
     </div>
 
     <div class="works-container">
-      <!-- <div class="img-gallery">
-        <div class="slide active">
-          <img src="/Images/image-1-min.png" alt="" />
-          <div class="info">
-            <h2>Slide 01</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias,
-              animi?
-            </p>
-          </div>
-        </div>
-
-        <div class="slide">
-          <img src="/Images/image-2-min.png" alt="" />
-          <div class="info">
-            <h2>Slide 02</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias,
-              animi?
-            </p>
-          </div>
-        </div>
-
-        <div class="slide">
-          <img src="/Images/image-3-min.png" alt="" />
-          <div class="info">
-            <h2>Slide 03</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias,
-              animi?
-            </p>
-          </div>
-        </div>
-
-        <div class="slide">
-          <img src="/Images/image-4-min.png" alt="" />
-          <div class="info">
-            <h2>Slide 04</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias,
-              animi?
-            </p>
-          </div>
-        </div>
-
-        <div class="slide">
-          <img src="/Images/image-5-min.png" alt="" />
-          <div class="info">
-            <h2>Slide 05</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias,
-              animi?
-            </p>
-          </div>
-        </div>
-        <div class="gallery-nav">
-          <div class="btn active"></div>
-          <div class="btn"></div>
-          <div class="btn"></div>
-          <div class="btn"></div>
-          <div class="btn"></div>
-        </div>
-      </div> -->
-
       <div class="works-map" id="works-map">
         <img src="/Images/Works/map.png" alt="" />
       </div>
 
+      <a href="#csopak">Csopak</a>
+      <a href="#badacsony">Badacsonytörmedic</a>
+      <a href="#balaton">Balatonthenye</a>
+
       <div class="works-content">
         <h1>Eddigi projektek térképen elhelyezve</h1>
-        <!-- <h2>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel
-          perferendis ipsa explicabo rerum sit, excepturi dignissimos sapiente
-          ea quam nulla accusantium aperiam soluta aspernatur omnis voluptatum
-          dolor minus perspiciatis alias commodi! Ipsum vel nisi laudantium
-          earum quas, sunt possimus modi assumenda dolores impedit culpa
-          praesentium quam quasi suscipit nulla debitis ea id at ab nihil
-          aliquid quidem in explicabo minima. Facilis nemo assumenda amet rem
-          quasi nulla! Velit modi eos nam dolore, quod voluptate perferendis
-          fugiat, vitae enim exercitationem explicabo voluptates quidem delectus
-          commodi, impedit vero! Numquam nostrum porro accusantium magnam et
-          consequatur veritatis, exercitationem eaque ullam tempora? Suscipit,
-          quasi.
-        </h2> -->
+
+        <div class="to-down active" id="to-down-btn">
+          <a onClick="window.scrollTo(0, 1000)">
+            <i class="fa-solid fa-angles-down"></i>
+          </a>
+        </div>
+
+        <div class="to-top" id="to-top-btn">
+          <a onClick="window.scrollTo(0, 0)">
+            <i class="fa-solid fa-angles-up"></i>
+          </a>
+        </div>
 
         <div class="works-box">
           <div class="works">
@@ -148,128 +86,130 @@
 
             <div class="faq-line"></div>
 
-            <a href="#csopak">Csopak</a>
+            <div class="row">
+              <div id="badacsony">
+                <h1>Badacsonytörmedic</h1>
+                <div class="image-carousel" id="badacsony">
+                  <div class="image-carousel__btn image-carousel__btn--prev">
+                    <i class="fa fa-caret-left" aria-hidden="true"></i>
+                  </div>
+                  <div class="image-carousel__btn image-carousel__btn--next">
+                    <i class="fa fa-caret-right" aria-hidden="true"></i>
+                  </div>
+                  <div class="image-carousel__slide">
+                    <img
+                      src="/Images/Works/Work-Badacs/badacsony-1.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="image-carousel__slide">
+                    <img
+                      src="/Images/Works/Work-Badacs/badacsony-2.jpg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="img-container">
+                  <img src="/Images/Works/Work-Badacs/badacsony-1.jpg" alt="" />
+                  <img src="/Images/Works/Work-Badacs/badacsony-2.jpg" alt="" />
+                </div>
+              </div>
 
-            <div id="badacs" class="works-box-static">
-              <h1>Badacsonytörmedic</h1>
-              <h2>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim
-                veniam labore, ab excepturi quam perferendis dolorem ratione
-                amet impedit eius!
-              </h2>
-              <img src="/Images/Works/Work-Badacs/badacsony-1.jpg" alt="" />
-              <img src="/Images/Works/Work-Badacs/badacsony-2.jpg" alt="" />
-              <div class="img-container"></div>
-            </div>
+              <div class="faq-line"></div>
 
-            <div class="faq-line"></div>
+              <div id="balaton">
+                <h1>Balatonhenye</h1>
+                <div class="image-carousel" id="image-carousel-2">
+                  <div class="image-carousel__btn image-carousel__btn--prev">
+                    <i class="fa fa-caret-left" aria-hidden="true"></i>
+                  </div>
+                  <div class="image-carousel__btn image-carousel__btn--next">
+                    <i class="fa fa-caret-right" aria-hidden="true"></i>
+                  </div>
+                  <div class="image-carousel__slide">
+                    <img src="/Images/Works/Work-balaton/1.jpg" alt="" />
+                  </div>
+                  <div class="image-carousel__slide">
+                    <img src="/Images/Works/Work-balaton/2.jpg" alt="" />
+                  </div>
+                  <div class="image-carousel__slide">
+                    <img src="/Images/Works/Work-balaton/3.jpg" alt="" />
+                  </div>
+                  <div class="image-carousel__slide">
+                    <img src="/Images/Works/Work-balaton/henye1.jpg" alt="" />
+                  </div>
+                  <div class="image-carousel__slide">
+                    <img
+                      src="/Images/Works/Work-balaton/Képkivágás.JPG"
+                      alt=""
+                    />
+                  </div>
+                  <div class="image-carousel__slide">
+                    <img src="/Images/Works/Work-balaton/y.jpg" alt="" />
+                  </div>
+                  <div class="image-carousel__dots-container"></div>
+                </div>
+                <div class="img-container">
+                  <img src="/Images/Works/Work-balaton/1.jpg" alt="" />
+                  <img src="/Images/Works/Work-balaton/2.jpg" alt="" />
+                  <img src="/Images/Works/Work-balaton/3.jpg" alt="" />
+                  <img src="/Images/Works/Work-balaton/henye1.jpg" alt="" />
+                  <img src="/Images/Works/Work-balaton/Képkivágás.JPG" alt="" />
+                  <img src="/Images/Works/Work-balaton/y.jpg" alt="" />
+                </div>
+              </div>
 
-            <div id="balaton" class="works-box-static">
-              <h1>Balatonhenye</h1>
-              <h2>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim
-                veniam labore, ab excepturi quam perferendis dolorem ratione
-                amet impedit eius!
-              </h2>
-              <!-- <div class="wrapper">
-                <div class="carousel">
-                  <i id="left" class="fa-solid fa-chevron-left"></i>
+              <div class="faq-line"></div>
 
-                  <img
-                    src="/Images/Works/Work-balaton/1.jpg"
-                    alt=""
-                    draggable="false"
-                  />
-                  <img
-                    src="/Images/Works/Work-balaton/2.jpg"
-                    alt=""
-                    draggable="false"
-                  />
-                  <img
-                    src="/Images/Works/Work-balaton/3.jpg"
-                    alt=""
-                    draggable="false"
-                  />
-                  <img
-                    src="/Images/Works/Work-balaton/henye1.jpg"
-                    alt=""
-                    draggable="false"
-                  />
-                  <img
-                    src="/Images/Works/Work-balaton/Képkivágás.JPG"
-                    alt=""
-                    draggable="false"
-                  />
-                  <img
-                    src="/Images/Works/Work-balaton/y.jpg"
-                    alt=""
-                    draggable="false"
-                  />
-                  <img
-                    src="/Images/Works/Work-Csopak/4.jpg"
-                    alt=""
-                    draggable="false"
-                  />
-                  <i id="right" class="fa-solid fa-chevron-right"></i>
+              <div id="csopak">
+                <h1>Csopak</h1>
+                <div class="image-carousel" id="image-carousel-3">
+                  <div class="image-carousel__btn image-carousel__btn--prev">
+                    <i class="fa fa-caret-left" aria-hidden="true"></i>
+                  </div>
+                  <div class="image-carousel__btn image-carousel__btn--next">
+                    <i class="fa fa-caret-right" aria-hidden="true"></i>
+                  </div>
+                  <div class="image-carousel__slide">
+                    <img src="/Images/Works/Work-Csopak/10.jpg" alt="" />
+                  </div>
+                  <div class="image-carousel__slide">
+                    <img src="/Images/Works/Work-Csopak/4.jpg" alt="" />
+                  </div>
+                  <div class="image-carousel__slide">
+                    <img src="/Images/Works/Work-Csopak/5.jpg" alt="" />
+                  </div>
+                  <div class="image-carousel__slide">
+                    <img src="/Images/Works/Work-Csopak/6.jpg" alt="" />
+                  </div>
+                  <div class="image-carousel__slide">
+                    <img src="/Images/Works/Work-Csopak/7.jpg" alt="" />
+                  </div>
+                  <div class="image-carousel__slide">
+                    <img src="/Images/Works/Work-Csopak/8.jpg" alt="" />
+                  </div>
+                  <div class="image-carousel__slide">
+                    <img src="/Images/Works/Work-Csopak/9.jpg" alt="" />
+                  </div>
+                  <div class="image-carousel__dots-container"></div>
                 </div>
-              </div> -->
-              <div class="wrapper">
-                <div class="slider">
-                  <img src="/Images/image-1-min.png" alt="" />
-                </div>
-                <div class="slider">
+                <div class="img-container">
                   <img src="/Images/Works/Work-Csopak/10.jpg" alt="" />
-                </div>
-                <div class="slider">
-                  <img src="/Images/Works/Work-Csopak/10.jpg" alt="" />
-                </div>
-                <div class="slider">
-                  <img src="/Images/Works/Work-Csopak/10.jpg" alt="" />
-                </div>
-                <div class="slider">
-                  <img src="/Images/Works/Work-Csopak/10.jpg" alt="" />
+                  <img src="/Images/Works/Work-Csopak/4.jpg" alt="" />
+                  <img src="/Images/Works/Work-Csopak/5.jpg" alt="" />
+                  <img src="/Images/Works/Work-Csopak/6.jpg" alt="" />
+                  <img src="/Images/Works/Work-Csopak/7.jpg" alt="" />
+                  <img src="/Images/Works/Work-Csopak/8.jpg" alt="" />
+                  <img src="/Images/Works/Work-Csopak/9.jpg" alt="" />
                 </div>
               </div>
             </div>
 
             <div class="faq-line"></div>
 
-            <div id="csopak" class="works-box-static">
-              <h1>Csopak</h1>
-              <h2>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim
-                veniam labore, ab excepturi quam perferendis dolorem ratione
-                amet impedit eius!
-              </h2>
+            <div class="faq-line"></div>
 
-              <div class="wrapper">
-                <div class="slider">
-                  <img src="/Images/Works/Work-Csopak/10.jpg" alt="" />
-                </div>
-                <div class="slider">
-                  <img src="/Images/Works/Work-Csopak/10.jpg" alt="" />
-                </div>
-                <div class="slider">
-                  <img src="/Images/Works/Work-Csopak/10.jpg" alt="" />
-                </div>
-                <div class="slider">
-                  <img src="/Images/Works/Work-Csopak/10.jpg" alt="" />
-                </div>
-                <div class="slider">
-                  <img src="/Images/Works/Work-Csopak/10.jpg" alt="" />
-                </div>
-              </div>
-
-              <div class="img-container">
-                <img src="/Images/Works/Work-Csopak/10.jpg" alt="" />
-                <img src="/Images/Works/Work-Csopak/4.jpg" alt="" />
-                <img src="/Images/Works/Work-Csopak/5.jpg" alt="" />
-                <img src="/Images/Works/Work-Csopak/6.jpg" alt="" />
-                <img src="/Images/Works/Work-Csopak/7.jpg" alt="" />
-                <img src="/Images/Works/Work-Csopak/8.jpg" alt="" />
-                <img src="/Images/Works/Work-Csopak/9.jpg" alt="" />
-              </div>
-            </div>
+            <div class="faq-line"></div>
 
             <div class="faq-line"></div>
           </div>

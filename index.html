@@ -60,58 +60,49 @@
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab corrupti
         beatae illum dolor! Nobis, aspernatur!
       </p> -->
-
-      <div class="wrapper">
-        <div class="carousel">
-          <i id="left" class="fa-solid fa-chevron-left"></i>
-          <img
-            src="/Images/Works/Work-Badacs/badacsony-1.jpg"
-            alt=""
-            draggable="false"
-          />
-          <img
-            src="/Images/Works/Work-Badacs/badacsony-2.jpg"
-            alt=""
-            draggable="false"
-          />
-          <img
-            src="/Images/Works/Work-balaton/1.jpg"
-            alt=""
-            draggable="false"
-          />
-          <img
-            src="/Images/Works/Work-balaton/2.jpg"
-            alt=""
-            draggable="false"
-          />
-          <img
-            src="/Images/Works/Work-balaton/3.jpg"
-            alt=""
-            draggable="false"
-          />
-          <img
-            src="/Images/Works/Work-balaton/henye1.jpg"
-            alt=""
-            draggable="false"
-          />
-          <img
-            src="/Images/Works/Work-balaton/Képkivágás.JPG"
-            alt=""
-            draggable="false"
-          />
-          <img
-            src="/Images/Works/Work-balaton/y.jpg"
-            alt=""
-            draggable="false"
-          />
-          <img src="/Images/Works/Work-Csopak/4.jpg" alt="" draggable="false" />
-          <i id="right" class="fa-solid fa-chevron-right"></i>
+      <div>
+        <div class="image-carousel" id="hero-carousel">
+          <div class="image-carousel__btn image-carousel__btn--prev">
+            <i class="fa fa-caret-left" aria-hidden="true"></i>
+          </div>
+          <div class="image-carousel__btn image-carousel__btn--next">
+            <i class="fa fa-caret-right" aria-hidden="true"></i>
+          </div>
+          <div class="image-carousel__slide">
+            <img
+              src="/Images/Works/Mindszentkálla/Mindszentkálla-2.jpg"
+              alt=""
+            />
+          </div>
+          <div class="image-carousel__slide">
+            <img
+              src="/Images/Works/Fülek/Dokumentum_2022-03-22_013511.jpg"
+              alt=""
+            />
+          </div>
+          <div class="image-carousel__slide">
+            <img src="/Images/Works/Poroszló/Poroszlo-2.jpg" alt="" />
+          </div>
+          <div class="image-carousel__slide">
+            <img src="/Images/Works/Work-Badacs/badacsony-2.jpg" alt="" />
+          </div>
+          <div class="image-carousel__slide">
+            <img src="/Images/Works/Work-balaton/3.jpg" alt="" />
+          </div>
         </div>
       </div>
     </main>
 
-    <div class="to-top">
-      <i class="fa-solid fa-chevron-down"></i>
+    <div class="to-down active" id="to-down-btn">
+      <a onClick="window.scrollTo(0, 1000)">
+        <i class="fa-solid fa-angles-down"></i>
+      </a>
+    </div>
+
+    <div class="to-top" id="to-top-btn">
+      <a onClick="window.scrollTo(0, 0)">
+        <i class="fa-solid fa-angles-up"></i>
+      </a>
     </div>
 
     <!-- Instaload imgs -->
