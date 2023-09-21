@@ -194,7 +194,11 @@ const imageCarousel = (carouselElement) => {
 document.addEventListener("DOMContentLoaded", () => {
   imageCarousel(document.getElementById("badacsony"));
   imageCarousel(document.getElementById("balaton"));
-  imageCarousel(document.getElementById("image-carousel-3"));
+  imageCarousel(document.getElementById("csopak"));
+  imageCarousel(document.getElementById("fulek"));
+  imageCarousel(document.getElementById("mindszent"));
+  imageCarousel(document.getElementById("poroszlo"));
+  imageCarousel(document.getElementById("pusztazamor"));
 });
 document.addEventListener("DOMContentLoaded", () => {
   imageCarousel(document.getElementById("hero-carousel"));

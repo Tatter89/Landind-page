@@ -584,9 +584,84 @@ footer .footer-container .social-icons i:hover {
           flex-direction: column;
 }
 
+.works-container .works-map {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .works-container .works-map img {
   width: 70vw;
   height: 80vh;
+}
+
+.works-container .works-map a {
+  position: absolute;
+  color: #333533;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.works-container .works-map a span {
+  display: none;
+  -webkit-transform: translateX(-40%);
+          transform: translateX(-40%);
+}
+
+.works-container .works-map a:hover span {
+  color: #f5cb5c;
+  background: rgba(51, 53, 51, 0.5);
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: block;
+}
+
+.works-container .works-map a i {
+  font-size: 1rem;
+  color: #333533;
+  background: #f5cb5c;
+  border-radius: 50%;
+  padding: 0.3rem;
+}
+
+.works-container .works-map #badacs-link {
+  top: 1rem;
+  left: 1rem;
+}
+
+.works-container .works-map #balaton-link {
+  top: 2.5rem;
+  left: 1rem;
+}
+
+.works-container .works-map #csopak-link {
+  top: 4rem;
+  left: 1rem;
+}
+
+.works-container .works-map #fulek-link {
+  top: 5.5rem;
+  left: 1rem;
+}
+
+.works-container .works-map #mindszent-link {
+  top: 7rem;
+  left: 1rem;
+}
+
+.works-container .works-map #poroszlo-link {
+  top: 8.5rem;
+  left: 5rem;
+}
+
+.works-container .works-map #pusztazamor-link {
+  top: 15rem;
+  left: 10rem;
 }
 
 .works-container .works-content {

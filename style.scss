@@ -477,9 +477,69 @@ footer {
   flex-direction: column;
 
   & .works-map {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
     & img {
       width: 70vw;
       height: 80vh;
+    }
+
+    & a {
+      position: absolute;
+      color: $primary-color;
+      font-size: 1.5rem;
+      text-decoration: none;
+
+      & span {
+        display: none;
+        transform: translateX(-40%);
+      }
+
+      &:hover span {
+        color: $secondary-color;
+        background: rgba($primary-color, 0.5);
+        padding: 5px 10px;
+        border-radius: 5px;
+        display: block;
+      }
+
+      & i {
+        font-size: 1rem;
+        color: $primary-color;
+        background: $secondary-color;
+        border-radius: 50%;
+        padding: 0.3rem;
+      }
+    }
+    & #badacs-link {
+      top: 1rem;
+      left: 1rem;
+    }
+    & #balaton-link {
+      top: 2.5rem;
+      left: 1rem;
+    }
+    & #csopak-link {
+      top: 4rem;
+      left: 1rem;
+    }
+    & #fulek-link {
+      top: 5.5rem;
+      left: 1rem;
+    }
+    & #mindszent-link {
+      top: 7rem;
+      left: 1rem;
+    }
+    & #poroszlo-link {
+      top: 8.5rem;
+      left: 5rem;
+    }
+    & #pusztazamor-link {
+      top: 15rem;
+      left: 10rem;
     }
   }
 
