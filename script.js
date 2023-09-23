@@ -196,10 +196,18 @@ document.addEventListener("DOMContentLoaded", () => {
   imageCarousel(document.getElementById("balaton"));
   imageCarousel(document.getElementById("csopak"));
   imageCarousel(document.getElementById("fulek"));
+});
+document.addEventListener("DOMContentLoaded", () => {
   imageCarousel(document.getElementById("mindszent"));
   imageCarousel(document.getElementById("poroszlo"));
   imageCarousel(document.getElementById("pusztazamor"));
+  imageCarousel(document.getElementById("tagyon"));
 });
+document.addEventListener("DOMContentLoaded", () => {
+  imageCarousel(document.getElementById("tagyon"));
+  imageCarousel(document.getElementById("tapolca"));
+});
+
 document.addEventListener("DOMContentLoaded", () => {
   imageCarousel(document.getElementById("hero-carousel"));
 });

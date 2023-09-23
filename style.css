@@ -664,6 +664,16 @@ footer .footer-container .social-icons i:hover {
   left: 10rem;
 }
 
+.works-container .works-map #tagyon-link {
+  top: 20rem;
+  left: 20rem;
+}
+
+.works-container .works-map #tapolca-link {
+  top: 26rem;
+  left: 22rem;
+}
+
 .works-container .works-content {
   display: -webkit-box;
   display: -ms-flexbox;
