@@ -4,11 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/Images/orangelogo.png" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
     />
-    <title>Landing page</title>
+    <title>Dr. Tóth Bence Péter</title>
     <script
       src="https://kit.fontawesome.com/edef1efc93.js"
       crossorigin="anonymous"
@@ -17,7 +18,7 @@
   </head>
 
   <body>
-    <nav class="nav">
+    <!--  <nav class="nav">
       <div class="nav__left">
         <div class="logo">
           <img src="/Images/tpblogo.png" alt="" />
@@ -51,16 +52,50 @@
 
     <div class="menu-btn">
       <span class="menu-btn__burger"></span>
-    </div>
+    </div> -->
 
-    <main class="hero">
-      <!-- Slideshow goes here -->
-      <!-- <h1 class="hero__title">This is the main title for the pages</h1>
+    <header class="offcanvas-menu">
+      <input type="checkbox" id="toogle-menu" />
+
+      <label for="toogle-menu" class="toogle-open"><span></span></label>
+
+      <nav>
+        <div>
+          <a href="index.html"> <img src="/Images/tpblogo.png" alt="" /> </a>
+          <label for="toogle-menu" class="toogle-close">
+            <span></span>
+          </label>
+        </div>
+        <ul>
+          <li><a href="index.html">Főoldal </a></li>
+          <li><a href="/Nav/instaimg.html">Galéria </a></li>
+          <li><a href="/Nav/works.html">Munkáim </a></li>
+          <li><a href="/Nav/planning.html">Tervezés menete </a></li>
+          <li><a href="/Nav/bio.html">Önéletrajz </a></li>
+          <li><a href="/Nav/contact.html">Kontakt </a></li>
+        </ul>
+      </nav>
+      <div class="overlay"></div>
+    </header>
+
+    <main>
+      <section id="section1">
+        <div class="hero">
+          <h1>Dr. Tóth Bence Péter</h1>
+          <p>Okleveles építészmérnök</p>
+          <img src="/Images/tpblogo.png" alt="" />
+        </div>
+      </section>
+    </main>
+
+    <!-- <main class="hero"> -->
+    <!-- Slideshow goes here -->
+    <!-- <h1 class="hero__title">This is the main title for the pages</h1>
       <p class="hero__text">
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab corrupti
         beatae illum dolor! Nobis, aspernatur!
       </p> -->
-      <div>
+    <!-- <div>
         <div class="image-carousel" id="hero-carousel">
           <div class="image-carousel__btn image-carousel__btn--prev">
             <i class="fa fa-caret-left" aria-hidden="true"></i>
@@ -90,10 +125,10 @@
             <img src="/Images/Works/Work-balaton/3.jpg" alt="" />
           </div>
         </div>
-      </div>
-    </main>
+      </div> -->
+    <!-- </main> -->
 
-    <div class="to-down active" id="to-down-btn">
+    <!-- <div class="to-down active" id="to-down-btn">
       <a onClick="window.scrollTo(0, 1000)">
         <i class="fa-solid fa-angles-down"></i>
       </a>
@@ -103,11 +138,11 @@
       <a onClick="window.scrollTo(0, 0)">
         <i class="fa-solid fa-angles-up"></i>
       </a>
-    </div>
+    </div> -->
 
     <!-- Instaload imgs -->
 
-    <div class="container" id="main-container">
+    <!--  <div class="container" id="main-container">
       <h1>Aktuális képek</h1>
       <div class="instaload">
         <img
@@ -155,7 +190,7 @@
           alt=""
         />
       </div>
-    </div>
+    </div> -->
 
     <footer>
       <div class="footer-container">

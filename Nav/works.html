@@ -4,11 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/Images/orangelogo.png" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
     />
-    <title>Landing page</title>
+    <title>Dr. Tóth Bence Péter</title>
     <script
       src="https://kit.fontawesome.com/edef1efc93.js"
       crossorigin="anonymous"
@@ -17,7 +18,30 @@
   </head>
 
   <body>
-    <nav class="nav">
+    <header class="offcanvas-menu">
+      <input type="checkbox" id="toogle-menu" />
+
+      <label for="toogle-menu" class="toogle-open"><span></span></label>
+
+      <nav>
+        <div>
+          <a href="/index.html"> <img src="/Images/tpblogo.png" alt="" /> </a>
+          <label for="toogle-menu" class="toogle-close">
+            <span></span>
+          </label>
+        </div>
+        <ul>
+          <li><a href="/index.html">Főoldal </a></li>
+          <li><a href="/Nav/instaimg.html">Galéria </a></li>
+          <li><a href="/Nav/works.html">Munkáim </a></li>
+          <li><a href="/Nav/planning.html">Tervezés menete </a></li>
+          <li><a href="/Nav/bio.html">Önéletrajz </a></li>
+          <li><a href="/Nav/contact.html">Kontakt </a></li>
+        </ul>
+      </nav>
+      <div class="overlay"></div>
+    </header>
+    <!-- <nav class="nav">
       <div class="nav__left">
         <div class="logo">
           <img src="/Images/tpblogo.png" alt="" />
@@ -47,7 +71,7 @@
           </li>
         </ul>
       </div>
-    </nav>
+    </nav> -->
 
     <div class="menu-btn">
       <span class="menu-btn__burger"></span>
@@ -58,24 +82,25 @@
         <img src="/Images/Works/map.png" alt="" />
 
         <a href="#badacsony" id="badacs-link"
-          ><i class="fa-solid fa-location-dot"></i>Badacsonytörmedic</a
-        >
+          ><i class="fa-solid fa-location-dot"></i>
+          <span>Badacsonytörmedic</span>
+        </a>
 
         <a href="#balaton" id="balaton-link"
-          ><i class="fa-solid fa-location-dot"></i>Balatonthenye</a
-        >
+          ><i class="fa-solid fa-location-dot"></i> <span>Balatonthenye</span>
+        </a>
 
         <a href="#csopak" id="csopak-link"
-          ><i class="fa-solid fa-location-dot"></i>Csopak</a
-        >
+          ><i class="fa-solid fa-location-dot"></i> <span>Csopak</span>
+        </a>
 
         <a href="#fulek" id="fulek-link"
-          ><i class="fa-solid fa-location-dot"></i>Fülek</a
-        >
+          ><i class="fa-solid fa-location-dot"></i> <span>Fülek</span>
+        </a>
 
         <a href="#mindszent" id="mindszent-link"
-          ><i class="fa-solid fa-location-dot"></i>Mindszentkálla</a
-        >
+          ><i class="fa-solid fa-location-dot"></i> <span>Mindszentkálla</span>
+        </a>
 
         <a href="#poroszlo" id="poroszlo-link"
           ><i class="fa-solid fa-location-dot"></i> <span>Poroszló</span>
@@ -119,6 +144,11 @@
             <div class="row">
               <div id="badacsony">
                 <h1>Badacsonytörmedic</h1>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut
+                  nobis labore aut mollitia ab? Expedita ratione ut nam
+                  voluptatem reiciendis.
+                </p>
                 <div class="image-carousel" id="badacsony">
                   <div class="image-carousel__btn image-carousel__btn--prev">
                     <i class="fa fa-caret-left" aria-hidden="true"></i>
@@ -140,8 +170,8 @@
                   </div>
                 </div>
                 <div class="img-container">
-                  <img src="/Images/Works/Work-Badacs/badacsony-1.jpg" alt="" />
-                  <img src="/Images/Works/Work-Badacs/badacsony-2.jpg" alt="" />
+                  <!-- <img src="/Images/Works/Work-Badacs/badacsony-1.jpg" alt="" />
+                  <img src="/Images/Works/Work-Badacs/badacsony-2.jpg" alt="" /> -->
                 </div>
               </div>
 
@@ -180,12 +210,13 @@
                   <div class="image-carousel__dots-container"></div>
                 </div>
                 <div class="img-container">
+                  <!-- 
                   <img src="/Images/Works/Work-balaton/1.jpg" alt="" />
                   <img src="/Images/Works/Work-balaton/2.jpg" alt="" />
                   <img src="/Images/Works/Work-balaton/3.jpg" alt="" />
                   <img src="/Images/Works/Work-balaton/henye1.jpg" alt="" />
                   <img src="/Images/Works/Work-balaton/Képkivágás.JPG" alt="" />
-                  <img src="/Images/Works/Work-balaton/y.jpg" alt="" />
+                  <img src="/Images/Works/Work-balaton/y.jpg" alt="" /> -->
                 </div>
               </div>
 
@@ -224,13 +255,14 @@
                   <div class="image-carousel__dots-container"></div>
                 </div>
                 <div class="img-container">
+                  <!-- 
                   <img src="/Images/Works/Work-Csopak/10.jpg" alt="" />
                   <img src="/Images/Works/Work-Csopak/4.jpg" alt="" />
                   <img src="/Images/Works/Work-Csopak/5.jpg" alt="" />
                   <img src="/Images/Works/Work-Csopak/6.jpg" alt="" />
                   <img src="/Images/Works/Work-Csopak/7.jpg" alt="" />
                   <img src="/Images/Works/Work-Csopak/8.jpg" alt="" />
-                  <img src="/Images/Works/Work-Csopak/9.jpg" alt="" />
+                  <img src="/Images/Works/Work-Csopak/9.jpg" alt="" /> -->
                 </div>
               </div>
 
@@ -312,7 +344,7 @@
                   <div class="image-carousel__dots-container"></div>
                 </div>
                 <div class="img-container">
-                  <img
+                  <!-- <img
                     src="/Images/Works/Mindszentkálla/Mindszentkálla-1.jpg"
                     alt=""
                   />
@@ -335,7 +367,7 @@
                   <img
                     src="/Images/Works/Mindszentkálla/Mindszentkálla-terv.JPG"
                     alt=""
-                  />
+                  /> -->
                 </div>
               </div>
 
@@ -360,8 +392,9 @@
                   <div class="image-carousel__dots-container"></div>
                 </div>
                 <div class="img-container">
+                  <!-- 
                   <img src="/Images/Works/Poroszló/Poroszlo-1.jpg" alt="" />
-                  <img src="/Images/Works/Poroszló/Poroszlo-2.jpg" alt="" />
+                  <img src="/Images/Works/Poroszló/Poroszlo-2.jpg" alt="" /> -->
                 </div>
               </div>
 
@@ -386,7 +419,8 @@
                   <div class="image-carousel__dots-container"></div>
                 </div>
                 <div class="img-container">
-                  <img src="/Images/Works/Pusztazámor/pusztazamor.jpg" alt="" />
+                  <!-- 
+                  <img src="/Images/Works/Pusztazámor/pusztazamor.jpg" alt="" /> -->
                 </div>
               </div>
 
@@ -453,6 +487,7 @@
                   <div class="image-carousel__dots-container"></div>
                 </div>
                 <div class="img-container">
+                  <!-- 
                   <img src="/Images/Works/Tagyon/tagyon-1.jpg" alt="" />
                   <img src="/Images/Works/Tagyon/tagyon-2.jpg" alt="" />
                   <img src="/Images/Works/Tagyon/tagyon-3.jpg" alt="" />
@@ -468,7 +503,7 @@
                   <img src="/Images/Works/Tagyon/tagyon-13.jpg" alt="" />
                   <img src="/Images/Works/Tagyon/tagyon-14.jpg" alt="" />
                   <img src="/Images/Works/Tagyon/tagyon-15.jpg" alt="" />
-                  <img src="/Images/Works/Tagyon/tagyon-16.jpg" alt="" />
+                  <img src="/Images/Works/Tagyon/tagyon-16.jpg" alt="" /> -->
                 </div>
               </div>
 
@@ -530,6 +565,7 @@
                   <div class="image-carousel__dots-container"></div>
                 </div>
                 <div class="img-container">
+                  <!-- 
                   <img src="/Images/Works/Tapolca/tapolca-1.jpg" alt="" />
                   <img src="/Images/Works/Tapolca/tapolca-2.jpg" alt="" />
                   <img src="/Images/Works/Tapolca/tapolca-3.jpg" alt="" />
@@ -543,7 +579,7 @@
                   <img src="/Images/Works/Tapolca/tapolca-11.jpg" alt="" />
                   <img src="/Images/Works/Tapolca/tapolca-12.jpg" alt="" />
                   <img src="/Images/Works/Tapolca/tapolca-15.jpg" alt="" />
-                  <img src="/Images/Works/Tapolca/tapolca-16.jpg" alt="" />
+                  <img src="/Images/Works/Tapolca/tapolca-16.jpg" alt="" /> -->
                 </div>
               </div>
             </div>

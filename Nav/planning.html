@@ -4,11 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/Images/orangelogo.png" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
     />
-    <title>Landing page</title>
+    <title>Dr. Tóth Bence Péter</title>
     <script
       src="https://kit.fontawesome.com/edef1efc93.js"
       crossorigin="anonymous"
@@ -17,7 +18,30 @@
   </head>
 
   <body>
-    <nav class="nav">
+    <header class="offcanvas-menu">
+      <input type="checkbox" id="toogle-menu" />
+
+      <label for="toogle-menu" class="toogle-open"><span></span></label>
+
+      <nav>
+        <div>
+          <a href="/index.html"> <img src="/Images/tpblogo.png" alt="" /> </a>
+          <label for="toogle-menu" class="toogle-close">
+            <span></span>
+          </label>
+        </div>
+        <ul>
+          <li><a href="/index.html">Főoldal </a></li>
+          <li><a href="/Nav/instaimg.html">Galéria </a></li>
+          <li><a href="/Nav/works.html">Munkáim </a></li>
+          <li><a href="/Nav/planning.html">Tervezés menete </a></li>
+          <li><a href="/Nav/bio.html">Önéletrajz </a></li>
+          <li><a href="/Nav/contact.html">Kontakt </a></li>
+        </ul>
+      </nav>
+      <div class="overlay"></div>
+    </header>
+    <!--  <nav class="nav">
       <div class="nav__left">
         <div class="logo">
           <img src="/Images/tpblogo.png" alt="" />
@@ -47,7 +71,7 @@
           </li>
         </ul>
       </div>
-    </nav>
+    </nav> -->
 
     <div class="menu-btn">
       <span class="menu-btn__burger"></span>
@@ -154,6 +178,8 @@
           </div>
         </li>
 
+        <div class="faq-line"></div>
+
         <li>
           <label for="second"
             >Badacsony <span><i class="fa-solid fa-chevron-down"></i></span
@@ -167,6 +193,8 @@
             <img src="/Images/image-2-min.png" alt="" />
           </div>
         </li>
+
+        <div class="faq-line"></div>
 
         <li>
           <label for="third"
@@ -182,6 +210,8 @@
           </div>
         </li>
 
+        <div class="faq-line"></div>
+
         <li>
           <label for="forth"
             >Badacsony <span><i class="fa-solid fa-chevron-down"></i></span
@@ -196,6 +226,8 @@
           </div>
         </li>
 
+        <div class="faq-line"></div>
+
         <li>
           <label for="fifth"
             >Badacsony <span><i class="fa-solid fa-chevron-down"></i></span
@@ -209,6 +241,8 @@
           </div>
         </li>
 
+        <div class="faq-line"></div>
+
         <li>
           <label for="sixth"
             >Badacsony <span><i class="fa-solid fa-chevron-down"></i></span
@@ -221,6 +255,8 @@
             </p>
           </div>
         </li>
+
+        <div class="faq-line"></div>
 
         <li>
           <label for="seventh"

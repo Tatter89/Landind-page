@@ -1,3 +1,34 @@
+const langBtn = document.getElementById("btn");
+const cvEng = document.querySelector(".download-btn-eng");
+const cvHun = document.querySelector(".download-btn-hun");
+
+function leftClick() {
+  langBtn.style.left = "0";
+  cvEng.style.display = "none";
+  cvHun.style.display = "block";
+}
+
+function rightClick() {
+  langBtn.style.left = "110px";
+  cvEng.style.display = "block";
+  cvHun.style.display = "none";
+}
+
+// To top Btn
+
+const toTopBtn = document.querySelector("#to-top-btn");
+const toDownBtn = document.querySelector("#to-down-btn");
+
+window.addEventListener("scroll", () => {
+  if (window.pageYOffset > 600) {
+    toTopBtn.classList.add("active");
+    toDownBtn.classList.remove("active");
+  } else {
+    toTopBtn.classList.remove("active");
+    toDownBtn.classList.add("active");
+  }
+});
+
 const menuBtn = document.querySelector(".menu-btn");
 const hamburger = document.querySelector(".menu-btn__burger");
 const nav = document.querySelector(".nav");
@@ -15,7 +46,7 @@ faqBoxes.forEach((faqBox) => {
 
 //Show menu
 
-let showMenu = false;
+/* let showMenu = false;
 
 menuBtn.addEventListener("click", toggleMenu);
 
@@ -31,11 +62,11 @@ function toggleMenu() {
 
     showMenu = false;
   }
-}
+} */
 
 // Nav offset
 
-let previousScrollPosition = window.pageYOffset;
+/* let previousScrollPosition = window.pageYOffset;
 
 const displayNavOnScroll = () => {
   const currentScrollPosition = window.pageYOffset;
@@ -50,7 +81,7 @@ const displayNavOnScroll = () => {
   previousScrollPosition = currentScrollPosition;
 };
 
-document.addEventListener("scroll", displayNavOnScroll);
+document.addEventListener("scroll", displayNavOnScroll); */
 
 // Dragable slider
 
@@ -210,19 +241,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.addEventListener("DOMContentLoaded", () => {
   imageCarousel(document.getElementById("hero-carousel"));
-});
-
-// To top Btn
-
-const toTopBtn = document.querySelector("#to-top-btn");
-const toDownBtn = document.querySelector("#to-down-btn");
-
-window.addEventListener("scroll", () => {
-  if (window.pageYOffset > 600) {
-    toTopBtn.classList.add("active");
-    toDownBtn.classList.remove("active");
-  } else {
-    toTopBtn.classList.remove("active");
-    toDownBtn.classList.add("active");
-  }
 });
