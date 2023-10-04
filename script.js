@@ -1,15 +1,21 @@
 const langBtn = document.getElementById("btn");
-const cvEng = document.querySelector(".download-btn-eng");
-const cvHun = document.querySelector(".download-btn-hun");
+const downloadEng = document.querySelector(".download-btn-eng");
+const downloadHun = document.querySelector(".download-btn-hun");
+const cvEng = document.querySelector(".cv-eng");
+const cvHun = document.querySelector(".cv-hun");
 
 function leftClick() {
   langBtn.style.left = "0";
+  downloadEng.style.display = "none";
+  downloadHun.style.display = "block";
   cvEng.style.display = "none";
   cvHun.style.display = "block";
 }
 
 function rightClick() {
   langBtn.style.left = "110px";
+  downloadEng.style.display = "block";
+  downloadHun.style.display = "none";
   cvEng.style.display = "block";
   cvHun.style.display = "none";
 }
@@ -237,6 +243,8 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
   imageCarousel(document.getElementById("tagyon"));
   imageCarousel(document.getElementById("tapolca"));
+  imageCarousel(document.getElementById("tiszakecske"));
+  imageCarousel(document.getElementById("tiszaladany"));
 });
 
 document.addEventListener("DOMContentLoaded", () => {
