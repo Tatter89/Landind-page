@@ -765,30 +765,6 @@ footer {
   overflow: hidden;
   background-color: rgba($bg-dark, 0.2);
 
-  & .dots-container {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    bottom: 10px;
-    right: 50%;
-    transform: translateX(50%);
-
-    & .dot {
-      width: 15px;
-      height: 15px;
-      margin: 15px;
-      border-radius: 50%;
-      box-shadow: 2px 2px 3px rgba($primary-color, 0.4);
-      cursor: pointer;
-      background: rgba($primary-color, 0.3);
-
-      &.active {
-        background: $secondary-color;
-      }
-    }
-  }
-
   .image-carousel__btn--prev {
     left: 0;
     font-size: 1.5rem;
@@ -833,6 +809,34 @@ footer {
 
     &--active {
       opacity: 1;
+    }
+  }
+
+  &__dots-container {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    width: 100%;
+    height: 30px;
+    bottom: -30px;
+    transition: bottom 0.2s ease;
+  }
+
+  &__dot {
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: $primary-color;
+    margin: 0 5px;
+    cursor: pointer;
+    border: 2px solid #fff;
+
+    &--active {
+      background-color: $secondary-color;
     }
   }
 }
