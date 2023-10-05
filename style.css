@@ -823,6 +823,32 @@ footer .footer-container .social-icons i:hover {
   height: 70vh;
   overflow: hidden;
   background-color: rgba(255, 251, 240, 0.2);
+  /* &__dots-container {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    width: 100%;
+    height: 30px;
+    bottom: -30px;
+    transition: bottom 0.2s ease;
+
+    & .image-carousel__dot {
+      display: block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: rgba($primary-color, 0.4);
+      margin: 10px 15px;
+      cursor: pointer;
+
+      &--active {
+        background-color: $secondary-color;
+      }
+    }
+  } */
 }
 
 .image-carousel .image-carousel__btn--prev {
@@ -884,41 +910,38 @@ footer .footer-container .social-icons i:hover {
 }
 
 .image-carousel__dots-container {
-  position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  z-index: 10;
-  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  cursor: pointer;
+  bottom: 20px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 100px;
   height: 30px;
-  bottom: -30px;
-  -webkit-transition: bottom 0.2s ease;
-  transition: bottom 0.2s ease;
 }
 
 .image-carousel__dot {
-  display: block;
-  width: 10px;
-  height: 10px;
+  z-index: 15;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
-  background-color: #333533;
-  margin: 0 5px;
-  cursor: pointer;
-  border: 2px solid #fff;
+  background: #333533;
+  margin: 5px 10px;
+  -webkit-box-shadow: 0px 1px 4px #333533;
+          box-shadow: 0px 1px 4px #333533;
 }
 
 .image-carousel__dot--active {
-  background-color: #f5cb5c;
+  background: #f5cb5c;
 }
 
 .overlay {

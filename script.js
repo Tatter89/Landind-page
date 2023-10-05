@@ -1,44 +1,3 @@
-const langBtn = document.getElementById("btn");
-const downloadEng = document.querySelector(".download-btn-eng");
-const downloadHun = document.querySelector(".download-btn-hun");
-const cvEng = document.querySelector(".cv-eng");
-const cvHun = document.querySelector(".cv-hun");
-
-function leftClick() {
-  langBtn.style.left = "0";
-  downloadEng.style.display = "none";
-  downloadHun.style.display = "block";
-  cvEng.style.display = "none";
-  cvHun.style.display = "block";
-}
-
-function rightClick() {
-  langBtn.style.left = "110px";
-  downloadEng.style.display = "block";
-  downloadHun.style.display = "none";
-  cvEng.style.display = "block";
-  cvHun.style.display = "none";
-}
-
-// To top Btn
-
-const toTopBtn = document.querySelector("#to-top-btn");
-const toDownBtn = document.querySelector("#to-down-btn");
-
-window.addEventListener("scroll", () => {
-  if (window.pageYOffset > 600) {
-    toTopBtn.classList.add("active");
-    toDownBtn.classList.remove("active");
-  } else {
-    toTopBtn.classList.remove("active");
-    toDownBtn.classList.add("active");
-  }
-});
-
-const menuBtn = document.querySelector(".menu-btn");
-const hamburger = document.querySelector(".menu-btn__burger");
-const nav = document.querySelector(".nav");
-
 const imageCarousel = (carouselElement) => {
   let activeIndex = 0;
   const prevButton = carouselElement.querySelector(
@@ -140,6 +99,7 @@ document.addEventListener("DOMContentLoaded", () => {
   imageCarousel(document.getElementById("csopak"));
   imageCarousel(document.getElementById("fulek"));
 });
+
 document.addEventListener("DOMContentLoaded", () => {
   imageCarousel(document.getElementById("mindszent"));
   imageCarousel(document.getElementById("poroszlo"));
@@ -156,3 +116,44 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
   imageCarousel(document.getElementById("hero-carousel"));
 });
+
+const langBtn = document.getElementById("btn");
+const downloadEng = document.querySelector(".download-btn-eng");
+const downloadHun = document.querySelector(".download-btn-hun");
+const cvEng = document.querySelector(".cv-eng");
+const cvHun = document.querySelector(".cv-hun");
+
+function leftClick() {
+  langBtn.style.left = "0";
+  downloadEng.style.display = "none";
+  downloadHun.style.display = "block";
+  cvEng.style.display = "none";
+  cvHun.style.display = "block";
+}
+
+function rightClick() {
+  langBtn.style.left = "110px";
+  downloadEng.style.display = "block";
+  downloadHun.style.display = "none";
+  cvEng.style.display = "block";
+  cvHun.style.display = "none";
+}
+
+// To top Btn
+
+const toTopBtn = document.querySelector("#to-top-btn");
+const toDownBtn = document.querySelector("#to-down-btn");
+
+window.addEventListener("scroll", () => {
+  if (window.pageYOffset > 600) {
+    toTopBtn.classList.add("active");
+    toDownBtn.classList.remove("active");
+  } else {
+    toTopBtn.classList.remove("active");
+    toDownBtn.classList.add("active");
+  }
+});
+
+const menuBtn = document.querySelector(".menu-btn");
+const hamburger = document.querySelector(".menu-btn__burger");
+const nav = document.querySelector(".nav");
