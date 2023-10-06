@@ -910,27 +910,19 @@ footer .footer-container .social-icons i:hover {
 }
 
 .image-carousel__dots-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  display: block;
   position: absolute;
   cursor: pointer;
   bottom: 20px;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  width: 100px;
   height: 30px;
 }
 
 .image-carousel__dot {
-  z-index: 15;
+  display: inline-block;
+  z-index: 5;
   width: 12px;
   height: 12px;
   border-radius: 50%;

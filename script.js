@@ -22,7 +22,6 @@ const imageCarousel = (carouselElement) => {
     dots[event.target.dataset.index].classList.add(
       "image-carousel__dot--active"
     );
-    console.log("dot", activeIndex);
   };
 
   for (let i = 0; i < slides.length; i++) {
@@ -51,7 +50,6 @@ const imageCarousel = (carouselElement) => {
       slides[activeIndex].classList.add("image-carousel__slide--active");
       dots[activeIndex].classList.add("image-carousel__dot--active");
     }
-    console.log("arrow", activeIndex);
   };
 
   const prevSlide = () => {
@@ -68,7 +66,6 @@ const imageCarousel = (carouselElement) => {
       slides[activeIndex].classList.add("image-carousel__slide--active");
       dots[activeIndex].classList.add("image-carousel__dot--active");
     }
-    console.log("arrow", activeIndex);
   };
 
   nextButton.addEventListener("click", () => nextSlide());
@@ -117,6 +114,7 @@ document.addEventListener("DOMContentLoaded", () => {
   imageCarousel(document.getElementById("hero-carousel"));
 });
 
+// Language switch
 const langBtn = document.getElementById("btn");
 const downloadEng = document.querySelector(".download-btn-eng");
 const downloadHun = document.querySelector(".download-btn-hun");
@@ -154,6 +152,6 @@ window.addEventListener("scroll", () => {
   }
 });
 
-const menuBtn = document.querySelector(".menu-btn");
+/* const menuBtn = document.querySelector(".menu-btn");
 const hamburger = document.querySelector(".menu-btn__burger");
-const nav = document.querySelector(".nav");
+const nav = document.querySelector(".nav"); */
