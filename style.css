@@ -134,12 +134,12 @@ h3 {
 }
 
 .downButton {
-  pointer-events: none;
-  opacity: 0;
-}
-.downButton.active {
-  opacity: 1;
   pointer-events: auto;
+  opacity: 1;
+}
+.downButton.hidden {
+  opacity: 0;
+  pointer-events: none;
 }
 
 /* .nav {

@@ -137,34 +137,31 @@ function rightClick() {
   cvHun.style.display = "none";
 }
 
-// To top Btn
-
-// const toTopBtn = document.querySelector("#to-top-btn");
-// const toDownBtn = document.querySelector("#to-down-btn");
-const scrollButton = document.querySelector('.scrollButton');
+// scrolling with buttons
+const upButton = document.querySelector('.scrollButton');
 const downButton = document.querySelector('.downButton');
-const scrollTop = () => {window.scrollTo(0, 0)};
+const scrollPageTo = (x = 0, y = 0) => window.scrollTo(x, y);
 
 const scrollButtonHandler = (event, scrollOffset = 600) => {
   if (window.scrollY > scrollOffset) {
     // show up button
-    scrollButton.classList.add('active');
-    if(downButton) downButton.classList.remove('active');
-    scrollButton.addEventListener('click', scrollTop);
+    upButton.classList.add('active');
+    if(downButton) downButton.classList.add('hidden');
   } else {
     // hide up button || show down button
-    scrollButton.classList.remove('active');
-    if(downButton) downButton.classList.add('active');
-    scrollButton.removeEventListener('click', scrollTop, true);
+    upButton.classList.remove('active');
+    if(downButton) downButton.classList.remove('hidden');
   }
 };
 
 if(downButton) {
   downButton.addEventListener('click', () => {
-    window.scrollTo(0, 1000);
+    scrollPageTo(0, 1000);
   });
 }
-window.addEventListener("scroll", scrollButtonHandler);
+upButton.addEventListener('click', scrollPageTo);
+window.addEventListener('scroll', scrollButtonHandler);
+window.addEventListener('DOMContentLoaded', scrollButtonHandler);
 
 /* const menuBtn = document.querySelector(".menu-btn");
 const hamburger = document.querySelector(".menu-btn__burger");
