@@ -139,18 +139,32 @@ function rightClick() {
 
 // To top Btn
 
-const toTopBtn = document.querySelector("#to-top-btn");
-const toDownBtn = document.querySelector("#to-down-btn");
+// const toTopBtn = document.querySelector("#to-top-btn");
+// const toDownBtn = document.querySelector("#to-down-btn");
+const scrollButton = document.querySelector('.scrollButton');
+const downButton = document.querySelector('.downButton');
+const scrollTop = () => {window.scrollTo(0, 0)};
 
-window.addEventListener("scroll", () => {
-  if (window.pageYOffset > 600) {
-    toTopBtn.classList.add("active");
-    toDownBtn.classList.remove("active");
+const scrollButtonHandler = (event, scrollOffset = 600) => {
+  if (window.scrollY > scrollOffset) {
+    // show up button
+    scrollButton.classList.add('active');
+    if(downButton) downButton.classList.remove('active');
+    scrollButton.addEventListener('click', scrollTop);
   } else {
-    toTopBtn.classList.remove("active");
-    toDownBtn.classList.add("active");
+    // hide up button || show down button
+    scrollButton.classList.remove('active');
+    if(downButton) downButton.classList.add('active');
+    scrollButton.removeEventListener('click', scrollTop, true);
   }
-});
+};
+
+if(downButton) {
+  downButton.addEventListener('click', () => {
+    window.scrollTo(0, 1000);
+  });
+}
+window.addEventListener("scroll", scrollButtonHandler);
 
 /* const menuBtn = document.querySelector(".menu-btn");
 const hamburger = document.querySelector(".menu-btn__burger");
