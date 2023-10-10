@@ -47,9 +47,12 @@ body {
   font-family: $primary-font;
   font-weight: lighter;
   color: $bg-dark;
-  background: linear-gradient(to right,
-      rgba($primary-color, 0.9),
-      rgba($primary-color, 0.2));
+  background: url(/Images/gray-brick-wallpaper.jpg);
+  /* background: linear-gradient(
+    to right,
+    rgba($primary-color, 0.9),
+    rgba($primary-color, 0.2)
+  ); */
   /* 
   background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.1)),
     url(/Images/blank-brown-paper-textured-wallpaper-min.jpg); */
@@ -151,6 +154,7 @@ h3 {
   right: 1rem;
   bottom: 1rem;
   cursor: pointer;
+  border: none;
 
   & i {
     font-size: 2rem;
@@ -658,10 +662,10 @@ footer {
       cursor: pointer;
       color: $secondary-color;
 
-      &+input[type="radio"] {
+      & + input[type="radio"] {
         display: none;
 
-        &:checked+.faq-content {
+        &:checked + .faq-content {
           max-height: 200px;
 
           & img {
@@ -694,10 +698,12 @@ footer {
   height: 3px;
   margin: 3rem auto;
   background: $primary-color;
-  background: linear-gradient(to right,
-      transparent,
-      $primary-color,
-      transparent);
+  background: linear-gradient(
+    to right,
+    transparent,
+    $primary-color,
+    transparent
+  );
 }
 
 .contact-container {
@@ -916,7 +922,7 @@ li {
 }
 
 .offcanvas-menu {
-  >label {
+  > label {
     top: 30px;
     left: 30px;
     position: fixed;
@@ -930,7 +936,6 @@ li {
   }
 
   label {
-
     span,
     span::before,
     span::after {
@@ -969,7 +974,7 @@ li {
     transition: 0.3s ease;
     padding: 40px 30px;
 
-    >div {
+    > div {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -1005,7 +1010,7 @@ li {
       }
     }
 
-    >ul {
+    > ul {
       margin-top: 30px;
 
       li {
@@ -1035,67 +1040,67 @@ li {
     display: none;
 
     &:checked {
-      ~.overlay {
+      ~ .overlay {
         transform: translateX(0%);
       }
 
-      ~label {
+      ~ label {
         opacity: 0;
         pointer-events: none;
       }
 
-      ~nav {
+      ~ nav {
         left: 0;
       }
 
-      ~nav label span {
+      ~ nav label span {
         background: transparent;
         top: 50px;
       }
 
-      ~nav label span:before {
+      ~ nav label span:before {
         transform: rotate(-45deg);
       }
 
-      ~nav label span:after {
+      ~ nav label span:after {
         transform: rotate(45deg);
       }
 
-      ~nav label span:before,
-      ~nav label span:after {
+      ~ nav label span:before,
+      ~ nav label span:after {
         transition-delay: 0.2s;
       }
 
-      ~nav ul li {
+      ~ nav ul li {
         opacity: 1;
         transform: translateX(0px);
       }
 
-      ~nav ul li:nth-child(1) {
+      ~ nav ul li:nth-child(1) {
         transition-delay: 0.1s;
       }
 
-      ~nav ul li:nth-child(2) {
+      ~ nav ul li:nth-child(2) {
         transition-delay: 0.2s;
       }
 
-      ~nav ul li:nth-child(3) {
+      ~ nav ul li:nth-child(3) {
         transition-delay: 0.3s;
       }
 
-      ~nav ul li:nth-child(4) {
+      ~ nav ul li:nth-child(4) {
         transition-delay: 0.4s;
       }
 
-      ~nav ul li:nth-child(5) {
+      ~ nav ul li:nth-child(5) {
         transition-delay: 0.5s;
       }
 
-      ~nav ul li:nth-child(6) {
+      ~ nav ul li:nth-child(6) {
         transition-delay: 0.6s;
       }
 
-      ~nav ul li:nth-child(7) {
+      ~ nav ul li:nth-child(7) {
         transition-delay: 0.7s;
       }
     }
@@ -1433,5 +1438,17 @@ input.check-toggle-round-flat:checked + label:after {
     .cv-eng {
       display: none;
     }
+  }
+}
+
+.insta-img-main {
+  margin: 10rem auto;
+  width: 1200px;
+
+  & .insta-h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem auto;
   }
 }
