@@ -64,6 +64,12 @@ body {
 h1 {
   color: $secondary-color;
   margin: 0;
+  font-size: 2rem;
+  font-weight: 400;
+
+  @media (max-width: $md) {
+    font-size: 1.5rem;
+  }
 }
 
 h2,
@@ -71,6 +77,10 @@ h3 {
   font-family: $primary-font;
   margin: 0;
   font-weight: lighter;
+
+  @media (max-width: $md) {
+    font-size: 1.2rem;
+  }
 }
 
 // Wrapper-old
@@ -155,6 +165,7 @@ h3 {
   bottom: 1rem;
   cursor: pointer;
   border: none;
+  background: transparent;
 
   & i {
     font-size: 2rem;
@@ -419,34 +430,7 @@ h3 {
       width: 80vw;
     }
   }
-}
-.bioimg {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-
-  & a {
-    color: $secondary-color;
-    font-size: 2rem;
-    text-decoration: none;
-    cursor: pointer;
-  }
-
-  & i {
-    color: $secondary-color;
-    font-size: 2rem;
-  }
-
-  & img {
-    margin: 40px;
-    top: 0;
-    width: 20vw;
-
-    @media (max-width: $md) {
-      width: 40vw;
-    }
-  }
-} */
+}*/
 
 footer {
   bottom: 0;
@@ -485,7 +469,6 @@ footer {
   flex-direction: column;
 
   & h1 {
-    font-size: 3rem;
     text-decoration: underline;
   }
 
@@ -496,14 +479,19 @@ footer {
     font-size: 1.5rem;
   }
 
-  & .works-map {
+  @media (max-width: $lg) {
+    width: 100vw;
+  }
+
+  /*  & .works-map {
     position: relative;
     display: flex;
     flex-direction: column;
 
     & img {
-      width: 70vw;
-      height: 80vh;
+      width: 1200px;
+      height: 800px;
+      overflow: scroll;
     }
 
     & a {
@@ -588,7 +576,7 @@ footer {
       top: 35rem;
       left: 40rem;
     }
-  }
+  } */
 
   & .works-content {
     display: flex;
@@ -607,9 +595,22 @@ footer {
     @include flexCenter;
     flex-wrap: wrap;
     margin-top: 4rem;
+    position: relative;
+
+    & .one-dot {
+      z-index: 5;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: $secondary-color;
+      margin: 5px 10px;
+      box-shadow: 0px 1px 4px $primary-color;
+      position: absolute;
+      bottom: 50px;
+    }
 
     & img {
-      width: 20vw;
+      height: 70vh;
       margin: 2rem;
     }
   }
@@ -627,11 +628,21 @@ footer {
   width: 60vw;
   padding-right: 0;
 
+  @media (max-width: $lg) {
+    width: 80vw;
+
+    transform: translateX(30%);
+  }
+
   & .faq-content {
     padding: 0 10px;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.6s ease-out;
+
+    @media (max-width: $lg) {
+      width: 80vw;
+    }
   }
 
   & li {
@@ -650,6 +661,10 @@ footer {
       top: 10vh;
       right: 15rem;
       transition: max-height 0.6s ease-out;
+
+      @media (max-width: $lg) {
+        display: none;
+      }
     }
 
     & label {
@@ -698,12 +713,7 @@ footer {
   height: 3px;
   margin: 3rem auto;
   background: $primary-color;
-  background: linear-gradient(
-    to right,
-    transparent,
-    $primary-color,
-    transparent
-  );
+  background: linear-gradient(to right, transparent, $bg-dark, transparent);
 }
 
 .contact-container {
@@ -721,12 +731,19 @@ footer {
     background: rgba($primary-color, 0.8);
     padding: 2rem;
     border-radius: 5px;
-    box-shadow: 5px 5px 5px #fffbf0;
     position: absolute;
     top: 6rem;
 
+    @media (max-width: $md) {
+      transform: translateX(0);
+    }
+
     & a {
       color: $bg-dark;
+
+      @media (max-width: $md) {
+        font-size: 1.2rem;
+      }
     }
 
     & i {
@@ -755,7 +772,7 @@ footer {
   }
 }
 
-.hero {
+/* .hero {
   & .image-carousel {
     width: 100vw;
     height: 100vh;
@@ -768,11 +785,19 @@ footer {
       transform: translateX(-30%);
     }
   }
-}
+
+  & h1 {
+    @media (max-width: $md) {
+      color: #f5cb5c;
+    }
+  }
+} */
 
 .row {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
   & h1 {
     display: flex;
@@ -783,14 +808,27 @@ footer {
   & .faq-line {
     margin-top: 100px;
   }
+
+  & p {
+    @media (max-width: $lg) {
+      font-size: 1.2rem;
+      margin: 0px 40px;
+    }
+  }
+  @media (max-width: $lg) {
+    width: 50vw;
+    margin: auto;
+  }
 }
 
 .image-carousel {
   position: relative;
-  width: 70vw;
   height: 70vh;
   overflow: hidden;
-  background-color: rgba($bg-dark, 0.2);
+
+  @media (max-width: $lg) {
+    width: 100vw;
+  }
 
   .image-carousel__btn--prev {
     left: 0;
@@ -817,6 +855,10 @@ footer {
     &:hover {
       background-color: rgba($primary-color, 0.8);
     }
+
+    @media (max-width: $lg) {
+      display: none;
+    }
   }
 
   &__slide {
@@ -831,7 +873,8 @@ footer {
     display: flex;
 
     & img {
-      height: 100%;
+      max-width: 100%;
+      max-height: 100%;
     }
 
     &--active {
@@ -980,9 +1023,9 @@ li {
       align-items: center;
 
       a {
-        background-color: rgba(#f5cb5c, 0.5);
+        background-color: rgba($bg-dark, 0.7);
         border-radius: 5px;
-        font-size: 2.5rem;
+        font-size: 1rem;
         font-weight: 500;
         display: flex;
         align-items: center;
@@ -990,6 +1033,10 @@ li {
 
         & img {
           width: 15rem;
+
+          @media (max-width: $md) {
+            width: 10rem;
+          }
         }
       }
 
@@ -1021,12 +1068,15 @@ li {
         transition: 0.4s ease;
 
         a {
-          font-size: 2.5rem;
+          font-size: 2rem;
           line-height: 1.5;
           font-weight: 400;
           color: $secondary-color;
-          text-decoration: underline;
           display: block;
+
+          @media (max-width: $md) {
+            font-size: 1.5rem;
+          }
         }
 
         &:hover {
@@ -1118,6 +1168,10 @@ section {
   background-repeat: no-repeat;
   background-size: contain;
 
+  @media (max-width: $lg) {
+    background-size: cover;
+  }
+
   & .hero {
     display: flex;
     justify-content: center;
@@ -1142,6 +1196,23 @@ section {
       position: absolute;
       top: 10rem;
       height: 180px;
+    }
+
+    @media (max-width: $lg) {
+      & h1 {
+        font-size: 2.5rem;
+      }
+      & img {
+        height: 130px;
+      }
+    }
+    @media (max-width: $md) {
+      & p {
+        font-size: 1.5rem;
+      }
+      & img {
+        height: 130px;
+      }
     }
   }
 }
@@ -1424,16 +1495,36 @@ input.check-toggle-round-flat:checked + label:after {
   display: flex;
   height: 100vh;
 
+  @media (max-width: $lg) {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+
   & .bioimg {
     margin: 30px;
 
+    @media (max-width: $lg) {
+    }
+
     & img {
       height: 30vh;
+
+      @media (max-width: $lg) {
+        display: none;
+      }
     }
   }
 
   & .cvcontainer {
-    margin: 30px;
+    height: 90vh;
+    margin: auto 2rem;
+
+    & img {
+      height: 100%;
+      width: 100%;
+    }
 
     .cv-eng {
       display: none;
@@ -1442,13 +1533,86 @@ input.check-toggle-round-flat:checked + label:after {
 }
 
 .insta-img-main {
-  margin: 10rem auto;
+  margin: auto;
   width: 1200px;
+  height: 100vh;
+  transform: translateY(10%);
 
-  & .insta-h1 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 2rem auto;
+  @media (max-width: 1300px) {
+    width: 800px;
   }
+  @media (max-width: 900px) {
+    width: 700px;
+  }
+  @media (max-width: $md) {
+    width: 500px;
+  }
+}
+.insta-h1 {
+  @include flexCenter;
+
+  & h1 {
+    margin-top: 5rem;
+    text-decoration: underline;
+  }
+}
+
+// Works list box
+
+.works-list-container {
+  @include flexCenter;
+
+  flex-wrap: wrap;
+}
+.list {
+  position: relative;
+  margin: 3rem 5rem;
+}
+.list h2 {
+  color: $secondary-color;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  font-size: 1.7rem;
+}
+.list ul {
+  position: relative;
+}
+.list ul li {
+  position: relative;
+  left: 0;
+  color: #fce4ec;
+  list-style: none;
+  margin: 4px 0;
+  border-left: 2px solid $secondary-color;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.list ul li:hover {
+  left: 10px;
+}
+.list ul li span {
+  position: relative;
+  padding: 8px;
+  padding-left: 12px;
+  display: inline-block;
+  z-index: 1;
+  transition: 0.5s;
+  font-size: 1.3rem;
+}
+.list ul li:hover span {
+  color: #111;
+}
+.list ul li:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: $secondary-color;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: 0.5s;
+}
+.list ul li:hover:before {
+  transform: scaleX(1);
 }
