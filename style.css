@@ -1072,7 +1072,7 @@ section .hero img {
 }
 
 .insta-img-main {
-  margin: auto;
+  margin: 0 auto;
   width: 1200px;
   height: 100vh;
   -webkit-transform: translateY(10%);
@@ -1095,6 +1095,10 @@ section .hero img {
   .insta-img-main {
     width: 500px;
   }
+}
+
+.insta-img-main .insta-img {
+  margin-top: -30px;
 }
 
 .insta-h1 {

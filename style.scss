@@ -896,7 +896,7 @@ section {
 
 // Gallery
 .insta-img-main {
-  margin: auto;
+  margin: 0 auto;
   width: 1200px;
   height: 100vh;
   transform: translateY(10%);
@@ -909,6 +909,10 @@ section {
   }
   @media (max-width: $md) {
     width: 500px;
+  }
+
+  & .insta-img {
+    margin-top: -30px;
   }
 }
 .insta-h1 {
