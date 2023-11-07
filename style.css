@@ -1161,6 +1161,12 @@ footer {
   height: 10vh;
 }
 
+@media (max-width: 768px) {
+  footer {
+    width: 100vw;
+  }
+}
+
 footer .footer-container {
   display: -webkit-box;
   display: -ms-flexbox;
