@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@200;400;600&family=Montserrat:wght@200;400;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Adamina&family=Quicksand:wght@300&family=Roboto&family=Saira+Condensed:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lora&family=Quicksand:wght@300&family=Roboto&family=Saira+Condensed:wght@300&display=swap");
+/* $secondary-color: #f5cb5c; */
 * {
   margin: 0;
   padding: 0;
@@ -41,7 +42,7 @@ body {
 }
 
 h1 {
-  color: #f5cb5c;
+  color: #23ffff;
   margin: 0;
   font-size: 2rem;
   font-weight: 400;
@@ -69,8 +70,8 @@ h3 {
 
 .logo img {
   margin: 0;
-  color: #f5cb5c;
-  background: #f5cb5c;
+  color: #23ffff;
+  background: #23ffff;
   height: 50px;
 }
 
@@ -96,7 +97,7 @@ h3 {
   border: 1px solid rgba(83, 83, 83, 0.7);
   border-radius: 4px;
   background: rgba(51, 53, 51, 0.5);
-  color: #f5cb5c;
+  color: #23ffff;
 }
 
 .scrollButton.active,
@@ -233,7 +234,7 @@ h3 {
   font-size: 3rem;
   font-weight: 400;
   cursor: pointer;
-  color: #f5cb5c;
+  color: #23ffff;
 }
 
 #accordion li label + input[type="radio"] {
@@ -304,7 +305,7 @@ h3 {
 }
 
 .contact-container .contact-links i {
-  color: #f5cb5c;
+  color: #23ffff;
   font-size: 1.5rem;
 }
 
@@ -319,7 +320,7 @@ h3 {
 }
 
 .contact-container .social-icons i {
-  color: #f5cb5c;
+  color: #23ffff;
   margin: 1rem;
 }
 
@@ -347,7 +348,7 @@ h3 {
 }
 
 .list h2 {
-  color: #f5cb5c;
+  color: #23ffff;
   font-weight: 500;
   letter-spacing: 1px;
   margin-bottom: 10px;
@@ -364,7 +365,7 @@ h3 {
   color: #fce4ec;
   list-style: none;
   margin: 4px 0;
-  border-left: 2px solid #f5cb5c;
+  border-left: 2px solid #23ffff;
   -webkit-transition: 0.5s;
   transition: 0.5s;
   cursor: pointer;
@@ -394,7 +395,7 @@ h3 {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: #f5cb5c;
+  background: #23ffff;
   -webkit-transform: scaleX(0);
           transform: scaleX(0);
   -webkit-transform-origin: left;
@@ -483,7 +484,7 @@ h3 {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background: #f5cb5c;
+  background: #23ffff;
   margin: 5px 10px;
   -webkit-box-shadow: 0px 1px 4px #333533;
           box-shadow: 0px 1px 4px #333533;
@@ -558,7 +559,7 @@ h3 {
 .image-carousel__btn {
   position: absolute;
   z-index: 10;
-  color: #f5cb5c;
+  color: #23ffff;
   background-color: rgba(51, 53, 51, 0.3);
   padding: 15px;
   display: inline-block;
@@ -634,7 +635,7 @@ h3 {
 }
 
 .image-carousel__dot--active {
-  background: #f5cb5c;
+  background: #23ffff;
 }
 
 .overlay {
@@ -711,7 +712,7 @@ li {
   height: 4px;
   width: 30px;
   border-radius: 5px;
-  background: #f5cb5c;
+  background: #23ffff;
 }
 
 .offcanvas-menu label span::before {
@@ -760,7 +761,7 @@ li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #f5cb5c;
+  color: #23ffff;
 }
 
 .offcanvas-menu nav > div a img {
@@ -793,7 +794,7 @@ li {
 .offcanvas-menu nav > div label span,
 .offcanvas-menu nav > div label span:before,
 .offcanvas-menu nav > div label span:after {
-  color: #f5cb5c;
+  color: #23ffff;
 }
 
 .offcanvas-menu nav > ul {
@@ -814,7 +815,7 @@ li {
   font-size: 2rem;
   line-height: 1.5;
   font-weight: 400;
-  color: #f5cb5c;
+  color: #23ffff;
   display: block;
 }
 
@@ -918,7 +919,7 @@ section {
           justify-content: center;
   height: 100vh;
   font-size: 4rem;
-  color: #f5cb5c;
+  color: #23ffff;
   background: url(/Images/hero-img.jpg);
   background-position: center;
   background-repeat: no-repeat;
@@ -995,9 +996,9 @@ section .hero img {
 }
 
 .form-box a {
-  color: #f5cb5c;
+  color: #23ffff;
   font-size: 1.5rem;
-  border: 2px solid #f5cb5c;
+  border: 2px solid #23ffff;
   padding: 5px 10px;
   border-radius: 20px;
 }
@@ -1032,7 +1033,7 @@ section .hero img {
   position: absolute;
   width: 110px;
   height: 100%;
-  background: #f5cb5c;
+  background: #23ffff;
   border-radius: 30px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -1148,7 +1149,7 @@ footer {
   bottom: 0;
   width: 100vw;
   background-color: rgba(83, 83, 83, 0.5);
-  color: #f5cb5c;
+  color: #23ffff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1178,7 +1179,7 @@ footer .footer-container h2 {
 }
 
 footer .footer-container .social-icons i {
-  color: #f5cb5c;
+  color: #23ffff;
   font-size: 1.5rem;
   margin: 0 1rem;
 }
