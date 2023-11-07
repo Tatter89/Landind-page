@@ -15,8 +15,7 @@
 }
 
 $primary-color: #333533;
-/* $secondary-color: #f5cb5c; */
-$secondary-color: #e95c1b;
+$secondary-color: #f5cb5c;
 $primary-font: "Lora";
 $secondary-font: "Lora";
 $bg-light: rgba(83, 83, 83, 0.5);
@@ -43,7 +42,7 @@ html {
 
 // general styles
 body {
-  margin: 0;
+  margin: 10px;
   overflow-x: hidden;
   font-family: $primary-font;
   font-weight: lighter;
