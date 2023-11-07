@@ -34,6 +34,12 @@ body {
   background-size: cover;
 }
 
+@media (max-width: 768px) {
+  body {
+    width: 100vw;
+  }
+}
+
 h1 {
   color: #f5cb5c;
   margin: 0;
@@ -138,12 +144,31 @@ h3 {
   margin: 100px;
   width: 60vw;
   padding-right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  #accordion {
+    width: 80vw;
+  }
 }
 
 #accordion p {
   font-size: 1.5rem;
-  background: rgba(0, 0, 0, 0.4);
-  padding: 1rem 2rem;
+  /* background: rgba(0, 0, 0, 0.4); */
+  padding: 1.5rem 2.5rem;
+}
+
+@media (max-width: 768px) {
+  #accordion p {
+    font-size: 1.2rem;
+  }
 }
 
 @media (max-width: 992px) {
@@ -505,13 +530,6 @@ h3 {
   .row p {
     font-size: 1.2rem;
     margin: 0px 40px;
-  }
-}
-
-@media (max-width: 992px) {
-  .row {
-    width: 50vw;
-    margin: auto;
   }
 }
 
@@ -1062,6 +1080,13 @@ section .hero img {
   margin: auto 2rem;
 }
 
+@media (max-width: 768px) {
+  .bio-container .cvcontainer {
+    width: 95vw;
+    height: auto;
+  }
+}
+
 .bio-container .cvcontainer img {
   height: 100%;
   width: 100%;
@@ -1093,7 +1118,8 @@ section .hero img {
 
 @media (max-width: 768px) {
   .insta-img-main {
-    width: 500px;
+    width: 100vw;
+    padding: 10px;
   }
 }
 
