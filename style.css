@@ -530,6 +530,13 @@ h3 {
   bottom: 20px;
 }
 
+@media (max-width: 992px) {
+  .works .img-container .one-dot {
+    width: 9px;
+    height: 9px;
+  }
+}
+
 .works .img-container img {
   max-width: 100%;
   height: auto;
@@ -660,6 +667,12 @@ h3 {
   height: 30px;
 }
 
+@media (max-width: 992px) {
+  .image-carousel__dots-container {
+    width: auto;
+  }
+}
+
 .image-carousel__dot {
   display: inline-block;
   z-index: 5;
@@ -674,6 +687,13 @@ h3 {
 
 .image-carousel__dot--active {
   background: #f5cb5c;
+}
+
+@media (max-width: 992px) {
+  .image-carousel__dot {
+    width: 9px;
+    height: 9px;
+  }
 }
 
 .overlay {
