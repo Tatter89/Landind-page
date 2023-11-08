@@ -826,9 +826,15 @@ li {
   width: 15rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .offcanvas-menu nav > div a img {
     width: 10rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .offcanvas-menu nav > div a img {
+    width: 8rem;
   }
 }
 
@@ -877,9 +883,15 @@ li {
   display: block;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .offcanvas-menu nav > ul li a {
     font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .offcanvas-menu nav > ul li a {
+    font-size: 1.2rem;
   }
 }
 

@@ -669,8 +669,12 @@ li {
         & img {
           width: 15rem;
 
-          @media (max-width: $md) {
+          @media (max-width: $lg) {
             width: 10rem;
+          }
+
+          @media (max-width: $md) {
+            width: 8rem;
           }
         }
       }
@@ -709,8 +713,12 @@ li {
           color: $secondary-color;
           display: block;
 
-          @media (max-width: $md) {
+          @media (max-width: $lg) {
             font-size: 1.5rem;
+          }
+
+          @media (max-width: $md) {
+            font-size: 1.2rem;
           }
         }
 
