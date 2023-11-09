@@ -676,6 +676,10 @@ li {
           @media (max-width: $md) {
             width: 8rem;
           }
+
+          @media (max-width: $lg), (device-height: 640px) {
+            display: none;
+          }
         }
       }
 
@@ -698,6 +702,10 @@ li {
 
     > ul {
       margin-top: 30px;
+
+      @media (max-width: $lg), (device-height: 640px) {
+        margin-top: -30px;
+      }
 
       li {
         cursor: pointer;

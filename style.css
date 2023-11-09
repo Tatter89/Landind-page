@@ -838,6 +838,12 @@ li {
   }
 }
 
+@media (max-width: 992px), (device-height: 640px) {
+  .offcanvas-menu nav > div a img {
+    display: none;
+  }
+}
+
 .offcanvas-menu nav > div label {
   width: 30px;
   height: 30px;
@@ -863,6 +869,12 @@ li {
 
 .offcanvas-menu nav > ul {
   margin-top: 30px;
+}
+
+@media (max-width: 992px), (device-height: 640px) {
+  .offcanvas-menu nav > ul {
+    margin-top: -30px;
+  }
 }
 
 .offcanvas-menu nav > ul li {
