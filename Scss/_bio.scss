@@ -1,0 +1,98 @@
+.form-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px;
+
+  & a {
+    color: $secondary-color;
+    font-size: 1.5rem;
+    border: 2px solid $secondary-color;
+    padding: 5px 10px;
+    border-radius: 20px;
+  }
+
+  & .download-btn-eng {
+    display: none;
+  }
+}
+
+.button-box {
+  width: 220px;
+  height: 100%;
+  margin: 35px auto;
+  position: relative;
+  border-radius: 30px;
+  background: $primary-color;
+}
+
+.toggle-btn {
+  padding: 10px 40px;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  outline: none;
+  position: relative;
+  text-align: center;
+  color: #fff;
+}
+
+#btn {
+  left: 0;
+  top: 0;
+  position: absolute;
+  width: 110px;
+  height: 100%;
+  background: $secondary-color;
+  border-radius: 30px;
+  transition: 0.5s;
+}
+
+// Bio
+
+.bio-container {
+  display: flex;
+  height: 100vh;
+
+  @media (max-width: $lg) {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+
+  & .bioimg {
+    margin: 30px;
+
+    @media (max-width: $lg) {
+    }
+
+    & img {
+      height: 30vh;
+
+      @media (max-width: $lg) {
+        display: none;
+      }
+    }
+  }
+
+  & .cvcontainer {
+    height: 90vh;
+    margin: auto 2rem;
+
+    @media (max-width: $md) {
+      width: 95vw;
+
+      height: auto;
+    }
+
+    & img {
+      height: 100%;
+      width: 100%;
+    }
+
+    .cv-eng {
+      display: none;
+    }
+  }
+}

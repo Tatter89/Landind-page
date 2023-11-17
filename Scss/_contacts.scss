@@ -1,0 +1,55 @@
+.contact-container {
+  background-image: url(/Images/contact_img.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  @include flexCenter;
+  position: relative;
+  margin: 0;
+  height: 100vh;
+
+  & .contact-links {
+    transform: translateX(-60px);
+    background: rgba($primary-color, 0.8);
+    padding: 2rem;
+    border-radius: 5px;
+    position: absolute;
+    top: 6rem;
+
+    @media (max-width: $md) {
+      transform: translateX(0);
+    }
+
+    & a {
+      color: $bg-dark;
+
+      @media (max-width: $md) {
+        font-size: 1.2rem;
+      }
+    }
+
+    & i {
+      color: $secondary-color;
+      font-size: 1.5rem;
+    }
+  }
+
+  & h1,
+  h2 {
+    margin: 1rem;
+  }
+
+  & .social-icons {
+    cursor: pointer;
+    font-size: 2rem;
+
+    & i {
+      color: $secondary-color;
+      margin: 1rem;
+
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+}

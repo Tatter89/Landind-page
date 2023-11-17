@@ -1,0 +1,30 @@
+// variables - colors, font definitions, spacings, sizes, breakpoints, etc
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@200;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@200;400;600&family=Montserrat:wght@200;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Adamina&family=Quicksand:wght@300&family=Roboto&family=Saira+Condensed:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora&family=Quicksand:wght@300&family=Roboto&family=Saira+Condensed:wght@300&display=swap");
+
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin transition {
+  transition: all 0.5s ease-in-out;
+}
+
+$primary-color: #333533;
+$secondary-color: #f5cb5c;
+$primary-font: "Lora";
+$secondary-font: "Lora";
+$bg-light: rgba(83, 83, 83, 0.5);
+$bg-dark: #fffbf0;
+$text: #121213;
+
+$xs: 576px;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
