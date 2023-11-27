@@ -409,7 +409,7 @@
   display: -ms-flexbox;
   display: flex;
   padding: 1rem 2rem;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 
 @media (max-width: 992px) {
@@ -427,6 +427,12 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  .works-container .works-content {
+    width: 80vw;
+  }
 }
 
 .works-container .works-content h1 {
@@ -835,7 +841,7 @@ body {
 
 @media (max-width: 768px) {
   body {
-    width: 100vw;
+    width: 90vw;
   }
 }
 
