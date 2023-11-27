@@ -50,12 +50,23 @@
   transition: 0.5s;
   font-size: 1.3rem;
 
+  & a {
+    color: #fce4ec;
+
+    &:hover {
+      color: #111;
+    }
+  }
+
   @media (max-width: $md) {
     font-size: 1.2rem;
   }
 }
 .list ul li:hover span {
   color: #111;
+  & a {
+    color: #111;
+  }
 }
 .list ul li:before {
   content: "";
@@ -156,6 +167,7 @@
   }
 
   & p {
+    min-width: max-content;
     @media (max-width: $lg) {
       font-size: 1.2rem;
       margin: 0px 10px;

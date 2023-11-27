@@ -333,6 +333,14 @@
   font-size: 1.3rem;
 }
 
+.list ul li span a {
+  color: #fce4ec;
+}
+
+.list ul li span a:hover {
+  color: #111;
+}
+
 @media (max-width: 768px) {
   .list ul li span {
     font-size: 1.2rem;
@@ -340,6 +348,10 @@
 }
 
 .list ul li:hover span {
+  color: #111;
+}
+
+.list ul li:hover span a {
   color: #111;
 }
 
@@ -487,6 +499,12 @@
 
 .row .faq-line {
   margin-top: 100px;
+}
+
+.row p {
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
 }
 
 @media (max-width: 992px) {
@@ -756,10 +774,6 @@
   }
 }
 
-.insta-img-main .insta-img {
-  margin-top: -30px;
-}
-
 .insta-h1 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -790,6 +804,7 @@ html {
 }
 
 body {
+  position: relative;
   margin: 0;
   overflow-x: hidden;
   font-family: "Lora";
@@ -1194,6 +1209,7 @@ section .hero {
           justify-content: center;
   position: relative;
   width: 500px;
+  height: 100vh;
 }
 
 section .hero h1 {
@@ -1208,6 +1224,11 @@ section .hero p {
   top: 8rem;
   color: #333533;
   font-size: 1.5rem;
+}
+
+section .hero .down-p-main {
+  position: absolute;
+  top: 90vh;
 }
 
 section .hero img {

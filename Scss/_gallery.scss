@@ -15,10 +15,6 @@
     width: 100vw;
     padding: 10px;
   }
-
-  & .insta-img {
-    margin-top: -30px;
-  }
 }
 .insta-h1 {
   @include flexCenter;

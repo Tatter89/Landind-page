@@ -19,6 +19,7 @@ html {
 
 // general styles
 body {
+  position: relative;
   margin: 0;
   overflow-x: hidden;
   font-family: $primary-font;
@@ -344,6 +345,7 @@ section {
     justify-content: center;
     position: relative;
     width: 500px;
+    height: 100vh;
 
     & h1 {
       color: $primary-color;
@@ -357,6 +359,11 @@ section {
       top: 8rem;
       color: $primary-color;
       font-size: 1.5rem;
+    }
+
+    & .down-p-main {
+      position: absolute;
+      top: 90vh;
     }
 
     & img {
