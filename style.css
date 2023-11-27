@@ -391,6 +391,14 @@
           flex-direction: column;
 }
 
+@media (max-width: 768px) {
+  .works-container {
+    padding: 0;
+    width: 95vw;
+    margin: auto;
+  }
+}
+
 .works-container h1 {
   text-decoration: underline;
 }
@@ -487,6 +495,12 @@
           justify-content: center;
 }
 
+@media (max-width: 992px) {
+  .row {
+    width: 95vw;
+  }
+}
+
 .row h1 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -501,16 +515,11 @@
   margin-top: 100px;
 }
 
-.row p {
-  min-width: -webkit-max-content;
-  min-width: -moz-max-content;
-  min-width: max-content;
-}
-
 @media (max-width: 992px) {
   .row p {
     font-size: 1.2rem;
-    margin: 0px 10px;
+    margin: auto;
+    width: 70vw;
   }
 }
 

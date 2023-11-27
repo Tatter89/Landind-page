@@ -89,6 +89,12 @@
   padding: 5rem;
   flex-direction: column;
 
+  @media (max-width: $md) {
+    padding: 0;
+    width: 95vw;
+    margin: auto;
+  }
+
   & h1 {
     text-decoration: underline;
   }
@@ -103,8 +109,6 @@
   @media (max-width: $lg) {
     width: 100%;
     margin-right: 10px;
-  }
-  @media (max-width: $md) {
   }
 
   & .works-content {
@@ -156,6 +160,10 @@
   align-items: center;
   justify-content: center;
 
+  @media (max-width: $lg) {
+    width: 95vw;
+  }
+
   & h1 {
     display: flex;
     justify-content: center;
@@ -167,10 +175,10 @@
   }
 
   & p {
-    min-width: max-content;
     @media (max-width: $lg) {
       font-size: 1.2rem;
-      margin: 0px 10px;
+      margin: auto;
+      width: 70vw;
     }
   }
 }
