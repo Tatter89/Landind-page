@@ -14,6 +14,7 @@
   cursor: pointer;
   border: none;
   background: transparent;
+  z-index: 20;
 }
 
 .scrollButton i,
@@ -951,7 +952,7 @@ li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  z-index: 9999;
+  z-index: 35;
 }
 
 .offcanvas-menu label span,
@@ -1146,11 +1147,13 @@ li {
 .offcanvas-menu input[type="checkbox"]:checked ~ nav label span:before {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
+  z-index: 45;
 }
 
 .offcanvas-menu input[type="checkbox"]:checked ~ nav label span:after {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
+  z-index: 45;
 }
 
 .offcanvas-menu input[type="checkbox"]:checked ~ nav label span:before,
