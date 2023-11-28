@@ -179,7 +179,10 @@
   justify-content: center;
 
   @media (max-width: $lg) {
-    margin-left: 40px;
+    margin-left: 20px;
+  }
+  @media (max-width: $md) {
+    margin-left: 50px;
   }
 
   & h1 {
