@@ -200,6 +200,10 @@
   background: linear-gradient(to right, transparent, #fffbf0, transparent);
 }
 
+.contact-name {
+  text-decoration: underline;
+}
+
 .contact-container {
   background-image: url(/Images/contact_img.jpg);
   background-repeat: no-repeat;
@@ -270,6 +274,22 @@
   color: #333533;
 }
 
+.works-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.work-h-main {
+  margin-bottom: 20px;
+}
+
 .works-list-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -280,20 +300,30 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  margin: auto;
+}
+
+@media (max-width: 992px) {
+  .works-list-container {
+    width: 100vw;
+  }
 }
 
 @media (max-width: 768px) {
   .works-list-container {
-    margin: 0px;
-    width: 90vw;
+    margin-left: 40px;
   }
 }
 
 .list {
   position: relative;
   margin: 3rem 5rem;
+}
+
+@media (max-width: 992px) {
+  .list {
+    margin: 10px;
+  }
 }
 
 .list h2 {
@@ -306,7 +336,7 @@
 
 @media (max-width: 768px) {
   .list h2 {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
 }
 
@@ -341,18 +371,18 @@
   font-size: 1.3rem;
 }
 
+@media (max-width: 768px) {
+  .list ul li span {
+    font-size: 1.1rem;
+  }
+}
+
 .list ul li span a {
   color: #fce4ec;
 }
 
 .list ul li span a:hover {
   color: #111;
-}
-
-@media (max-width: 768px) {
-  .list ul li span {
-    font-size: 1.2rem;
-  }
 }
 
 .list ul li:hover span {

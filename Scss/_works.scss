@@ -1,18 +1,31 @@
 // Works list box
+.works-container {
+  @include flexCenter;
+}
+
+.work-h-main {
+  margin-bottom: 20px;
+}
 
 .works-list-container {
   @include flexCenter;
+  margin: auto;
 
-  flex-wrap: wrap;
+  @media (max-width: $lg) {
+    width: 100vw;
+  }
 
   @media (max-width: $md) {
-    margin: 0px;
-    width: 90vw;
+    margin-left: 40px;
   }
 }
 .list {
   position: relative;
   margin: 3rem 5rem;
+
+  @media (max-width: $lg) {
+    margin: 10px;
+  }
 }
 .list h2 {
   color: $secondary-color;
@@ -22,7 +35,7 @@
   font-size: 1.7rem;
 
   @media (max-width: $md) {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
 }
 .list ul {
@@ -50,16 +63,16 @@
   transition: 0.5s;
   font-size: 1.3rem;
 
+  @media (max-width: $md) {
+    font-size: 1.1rem;
+  }
+
   & a {
     color: #fce4ec;
 
     &:hover {
       color: #111;
     }
-  }
-
-  @media (max-width: $md) {
-    font-size: 1.2rem;
   }
 }
 .list ul li:hover span {
