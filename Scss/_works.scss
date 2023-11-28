@@ -20,7 +20,10 @@
     width: 90vw;
   }
   @media (max-width: $md) {
+    display: flex;
+    justify-content: center;
     margin-left: -40px;
+    margin-right: 0;
     padding-top: 5rem;
   }
 }
