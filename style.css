@@ -305,13 +305,7 @@
 
 @media (max-width: 992px) {
   .works-list-container {
-    width: 100vw;
-  }
-}
-
-@media (max-width: 768px) {
-  .works-list-container {
-    margin-left: 40px;
+    width: 90vw;
   }
 }
 
@@ -542,7 +536,7 @@
 
 @media (max-width: 992px) {
   .row {
-    width: 95vw;
+    margin-left: 40px;
   }
 }
 
