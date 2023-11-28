@@ -286,8 +286,14 @@
           justify-content: center;
 }
 
+@media (max-width: 768px) {
+  .works-container {
+    margin-right: -20px;
+  }
+}
+
 .work-h-main {
-  margin-bottom: 20px;
+  margin-top: 5rem;
 }
 
 .works-list-container {
@@ -314,6 +320,7 @@
 @media (max-width: 768px) {
   .works-list-container {
     margin-left: -40px;
+    padding-top: 5rem;
   }
 }
 
@@ -433,7 +440,6 @@
 
 @media (max-width: 768px) {
   .works-container {
-    margin-top: 5rem;
     padding: 0;
     width: 90vw;
     margin-left: -10px;
