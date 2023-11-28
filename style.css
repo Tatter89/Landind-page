@@ -550,7 +550,8 @@
 
 @media (max-width: 768px) {
   .row {
-    margin-left: 50px;
+    margin-left: 60px;
+    padding-left: 10px;
   }
 }
 
