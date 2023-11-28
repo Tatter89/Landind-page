@@ -326,7 +326,7 @@
 
 .list {
   position: relative;
-  margin: 3rem 5rem;
+  margin: 3rem 3rem;
 }
 
 @media (max-width: 992px) {
@@ -782,7 +782,7 @@
 }
 
 .bio-container .bioimg {
-  margin: 30px;
+  margin: 3rem 30px;
 }
 
 .bio-container .bioimg img {
@@ -797,7 +797,7 @@
 
 .bio-container .cvcontainer {
   height: 90vh;
-  margin: auto 2rem;
+  margin: 3rem 2rem;
 }
 
 @media (max-width: 768px) {
@@ -1304,7 +1304,7 @@ section .hero .down-p-main {
 section .hero img {
   position: absolute;
   top: 10rem;
-  height: 180px;
+  height: 130px;
 }
 
 @media (max-width: 992px) {
@@ -1312,7 +1312,7 @@ section .hero img {
     font-size: 2.5rem;
   }
   section .hero img {
-    height: 130px;
+    height: 100px;
   }
 }
 
