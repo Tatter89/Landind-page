@@ -9,10 +9,14 @@
 
 .works-list-container {
   @include flexCenter;
+  flex-wrap: wrap;
   margin: auto;
 
   @media (max-width: $lg) {
     width: 90vw;
+  }
+  @media (max-width: $md) {
+    margin-left: -40px;
   }
 }
 .list {
