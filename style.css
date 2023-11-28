@@ -68,7 +68,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 3rem;
+  padding-top: 3rem;
 }
 
 @media (max-width: 768px) {
@@ -1299,6 +1299,9 @@ section .hero p {
 section .hero .down-p-main {
   position: absolute;
   top: 90vh;
+  color: #f5cb5c;
+  background: rgba(83, 83, 83, 0.5);
+  padding: 8px 15px;
 }
 
 section .hero img {
