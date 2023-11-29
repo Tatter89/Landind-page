@@ -446,7 +446,7 @@
   .works-container {
     padding: 0;
     width: 90vw;
-    margin-left: -10px;
+    margin: auto;
   }
 }
 
