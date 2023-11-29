@@ -21,7 +21,7 @@
   }
   @media (max-width: $md) {
     align-items: flex-start;
-    margin-left: -10px;
+    margin-left: 10px;
     margin-right: 0;
     padding-top: 5rem;
   }
@@ -280,6 +280,7 @@
     left: 50%;
     transform: translateX(-50%);
     height: 30px;
+    pointer-events: none;
 
     @media (max-width: $lg) {
       width: auto;
