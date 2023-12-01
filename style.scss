@@ -366,6 +366,14 @@ section {
       color: $secondary-color;
       background: rgba($bg-light, 0.5);
       padding: 8px 15px;
+
+      @media (max-width: $lg) {
+        font-size: 1.5rem;
+      }
+
+      @media (max-width: $md) {
+        font-size: 1.2rem;
+      }
     }
 
     & img {
