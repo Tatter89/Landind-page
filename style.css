@@ -727,6 +727,12 @@
   border-radius: 20px;
 }
 
+@media (max-width: 768px) {
+  .form-box a {
+    font-size: 1.3rem;
+  }
+}
+
 .form-box .download-btn-eng {
   display: none;
 }
@@ -749,6 +755,12 @@
   position: relative;
   text-align: center;
   color: #fff;
+}
+
+@media (max-width: 768px) {
+  .toggle-btn {
+    font-size: 1rem;
+  }
 }
 
 #btn {
@@ -808,6 +820,7 @@
 @media (max-width: 768px) {
   .bio-container .cvcontainer {
     width: 95vw;
+    margin-bottom: -50px;
     height: auto;
   }
 }

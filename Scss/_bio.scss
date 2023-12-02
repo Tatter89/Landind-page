@@ -10,6 +10,10 @@
     border: 2px solid $secondary-color;
     padding: 5px 10px;
     border-radius: 20px;
+
+    @media (max-width: $md) {
+      font-size: 1.3rem;
+    }
   }
 
   & .download-btn-eng {
@@ -35,6 +39,10 @@
   position: relative;
   text-align: center;
   color: #fff;
+
+  @media (max-width: $md) {
+    font-size: 1rem;
+  }
 }
 
 #btn {
@@ -82,7 +90,7 @@
 
     @media (max-width: $md) {
       width: 95vw;
-
+      margin-bottom: -50px;
       height: auto;
     }
 
