@@ -1018,6 +1018,7 @@ li {
 .offcanvas-menu label span::before,
 .offcanvas-menu label span::after {
   content: "";
+  z-index: 150;
   position: absolute;
   height: 4px;
   width: 30px;
