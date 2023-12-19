@@ -280,7 +280,6 @@
     left: 50%;
     transform: translateX(-50%);
     height: 30px;
-    pointer-events: none;
 
     @media (max-width: $lg) {
       width: auto;

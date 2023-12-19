@@ -72,9 +72,11 @@
       margin: 0;
       max-height: 0;
       width: 35vw;
-      top: 10vh;
+      top: 18vh;
       right: 15rem;
       transition: max-height 0.6s ease-out;
+      object-fit: contain;
+      z-index: -2;
 
       @media (max-width: $lg) {
         display: none;
