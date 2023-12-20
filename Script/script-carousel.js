@@ -99,7 +99,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.addEventListener("DOMContentLoaded", () => {
   imageCarousel(document.getElementById("mindszent"));
-  imageCarousel(document.getElementById("poroszlo"));
   /* imageCarousel(document.getElementById("pusztazamor")); */
 });
 document.addEventListener("DOMContentLoaded", () => {
