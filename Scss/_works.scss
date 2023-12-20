@@ -219,7 +219,7 @@
   position: relative;
   height: 70vh;
   overflow: hidden;
-  z-index: -2;
+  z-index: 2;
 
   @media (max-width: $lg) {
     width: 95vw;
