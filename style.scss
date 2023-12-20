@@ -150,6 +150,12 @@ li {
     span::after {
       transform: translate(-5px, 12px);
     }
+
+    @media (max-width: $md) {
+      padding: 0px;
+      margin-top: -20px;
+      margin-left: -10px;
+    }
   }
 
   nav {
@@ -376,6 +382,7 @@ section {
 
       @media (max-width: $md) {
         font-size: 1.2rem;
+        transform: translateY(-30px);
       }
     }
 

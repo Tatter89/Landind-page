@@ -187,7 +187,7 @@
 }
 
 #accordion li label + input[type="radio"]:checked + .faq-content {
-  max-height: 200px;
+  max-height: 400px;
 }
 
 #accordion li label + input[type="radio"]:checked + .faq-content img {
@@ -458,7 +458,7 @@
 }
 
 .works-container p {
-  background-color: rgba(51, 53, 51, 0.3);
+  background-color: rgba(51, 53, 51, 0.7);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -491,6 +491,12 @@
 
 .works-container .works-content h1 {
   margin: 2rem auto;
+}
+
+@media (max-width: 768px) {
+  .works-container .works-content h1 {
+    margin-bottom: 1rem;
+  }
 }
 
 .works {
@@ -594,11 +600,18 @@
   position: relative;
   height: 70vh;
   overflow: hidden;
+  z-index: -2;
 }
 
 @media (max-width: 992px) {
   .image-carousel {
     width: 95vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .image-carousel {
+    margin-top: -2rem;
   }
 }
 
@@ -1055,6 +1068,14 @@ li {
           transform: translate(-5px, 12px);
 }
 
+@media (max-width: 768px) {
+  .offcanvas-menu label {
+    padding: 0px;
+    margin-top: -20px;
+    margin-left: -10px;
+  }
+}
+
 .offcanvas-menu nav {
   position: fixed;
   z-index: 100;
@@ -1338,6 +1359,8 @@ section .hero .down-p-main {
 @media (max-width: 768px) {
   section .hero .down-p-main {
     font-size: 1.2rem;
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
   }
 }
 

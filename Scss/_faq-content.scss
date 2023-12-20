@@ -97,7 +97,7 @@
         display: none;
 
         &:checked + .faq-content {
-          max-height: 200px;
+          max-height: 400px;
 
           & img {
             max-height: 80vh;
